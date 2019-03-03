@@ -10,16 +10,13 @@ export default class Latest extends Component {
   render() {
     return (
       <div className="Latest">
-      <div className="latest-wrapper">
-        <h2>Voitures plus récentes</h2>
-      </div>
-      <div className="latest-content-wrapper">
-        {/* <SearchMain id="ser"/>
-        <LatestCards id="ser"/> */}
-        <SearchMain/>
-        <LatestCards />
-      </div>
-
+        <div className="latest-wrapper">
+          <h1>Voitures plus récentes</h1>
+        </div>
+        <div className="latest-content-wrapper">
+          <SearchMain/>
+          <LatestCards />
+        </div>
       </div>
     )
   }

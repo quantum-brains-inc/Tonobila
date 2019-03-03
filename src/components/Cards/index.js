@@ -1,16 +1,17 @@
 import React from 'react';
 import Car from '../../images/tesla.jpg';
-import './Cards.css'
+import './Cards.css';
+import Icon from '../../images/photo.png'
 
  const Cards = () =>{
   return (
       <div className="card" >
-            <div className="card-img"><img src={Car}/><img className='pics-icon'/></div>
+            <div className="card-img"><img src={Car}/><img src={Icon} className='pics-icon'/></div>
             <div className="card-line"></div>
-            <h2 className="card-title">o9ssim billah a5oti</h2>
+            <h2 className="card-title">Tesla billah a5oti</h2>
             <div className="card-bottom">
-                <p className="card-city"> hello</p>
-                <p className="card-date"> best car eva</p>
+                <p className="card-city"> Agadir</p>
+                <p className="card-date"> Yesterday</p>
             </div>
         </div>
   )

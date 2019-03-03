@@ -1,15 +1,23 @@
 .search-main {
     box-shadow: 1px 1px rgba(116, 116, 116, 0.1);
     padding:0 20px;
-    background:white
-    
+    background:white;
+    margin-top: 0px;
 }
+
 .form-search-main{
+    height: 100%;
     display:flex;
-    flex-direction: column;        
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 20px; 
+}
+.form-search-main h1{
+    font-weight:500;
+    padding: 0;
 }
 .form-search-main select{
-    margin:20px auto;
+    height: 40px;
     width:200px;
     border:none;
     background:#faf9f6;
@@ -20,9 +28,10 @@
     outline: none   
 }
 .form-search-main button{
+    margin: 10px;
     background: #ffc000;
     border-radius: 50px;
-    padding: 5px 20px;
+    padding: 7px 20px;
     color: #ffffff;
     font-weight: bolder;
     box-shadow: 0 0 15px #ffc000;

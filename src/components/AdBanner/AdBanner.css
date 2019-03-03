@@ -1,0 +1,16 @@
+.ad {
+    background: #ffffff;
+    height: 8rem;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 1px 1px rgba(116, 116, 116, 0.1);
+    
+}
+.ad p {
+    font-size: 4rem;
+    color: #818181;
+    line-height: 8rem;
+
+
+}

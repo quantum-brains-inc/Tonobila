@@ -5,7 +5,6 @@ export default class SearchMain extends Component {
   render() {
     return (
       <div className="search-main">
-        
         <form className="form-search-main" >
           <h1>Recherche</h1>
           <select><option value="marque">marque</option></select>
