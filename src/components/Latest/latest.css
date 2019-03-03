@@ -1,5 +1,5 @@
 .Latest{
-    background: #faf9f6;
+    background: #f5f4f1;
     width: 1170px ;
     margin: 0 auto;
     padding-top:30px 
@@ -11,9 +11,8 @@
     box-sizing: border-box;
 
 }
-.latest-wrapper h2 {
-    font-weight: 500;
-    font-size: 20pt;
+.latest-wrapper h1 {
+    font-weight: 600;
 }
 .latest-content-wrapper {
     display: flex;

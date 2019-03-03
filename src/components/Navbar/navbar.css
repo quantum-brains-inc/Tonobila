@@ -16,18 +16,20 @@ nav .menu ul li{
 nav a {
     color: #333333; 
 }
-.sign-in a{
-    margin-left: 3rem;
-    padding: 10px 0;
+.sign-in button{
+    background: transparent;
+    box-shadow: none;
+    color: #323232;
+    font-weight: normal;
 }
-.sign-up a{
+/* .sign-up button{
     background: #ffc000;
     border-radius: 50px;
     padding: 5px 20px;
     color: #ffffff;
     font-weight: bolder;
     box-shadow: 0 0 15px #ffc000
-}
+} */
 .Navbar{
     width: 100%;
     background: #ffffff;

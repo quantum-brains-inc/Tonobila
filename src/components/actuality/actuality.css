@@ -1,0 +1,13 @@
+.actuality{
+    width: 1170px;
+    margin: 20px auto 70px;
+}
+
+.actuality>h1{
+    font-weight: 600;
+}
+
+.actuality .actuality-container{
+    display: flex;
+    justify-content: space-between
+}

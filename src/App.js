@@ -4,8 +4,8 @@ import Header from './components/Header-home'
 import Navbar from './components/Navbar'
 import Latest from './components/Latest'
 import AdBanner from './components/AdBanner'
-// import AdBanner from './components/AdBanner/index';
-
+import Footer from './components/Footer'
+import Actuality from './components/actuality'
 class App extends Component {
   render() {
     return (
@@ -13,8 +13,10 @@ class App extends Component {
         <Navbar />
         <Header />
         <div className="back-ground">
-        <Latest />
-        <AdBanner/>
+          <Latest />
+          <AdBanner/>
+          <Actuality/>
+          <Footer/>
         </div>
       </div>
     );

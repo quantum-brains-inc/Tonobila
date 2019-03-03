@@ -12,8 +12,8 @@ const  Navbar = () => {
                     <li><a href="#">Annonces</a></li>
                     <li><a href="#">Magazine</a></li>
                     <li><a href="#">Contactez nous</a></li>
-                    <li className='sign-in'><a href="#">Sign In</a></li>
-                    <li className='sign-up'><a href="#">Sign Up</a></li>
+                    <li className='sign-in'><button>Sign In</button></li>
+                    <li className='sign-up'><button>Sign Up</button></li>
                 </ul>
             </div>
         </nav>
