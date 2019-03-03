@@ -1,0 +1,47 @@
+.header{
+    max-width: 90%;
+    height: 90vh;
+    margin: 0 auto;
+    position: relative;
+}
+.header .header-card{
+    background: #ffffff;
+    width: 500px;
+    padding: 20px 25px;
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.header .header-card h2{
+    margin: 0;
+    text-transform: uppercase;
+    font-style: italic
+}
+
+.header .header-card p{
+    width: 80%;
+    color: #555555;
+}
+.header .header-card button{
+    width: 70px;
+    height: 70px;
+    padding: 20px;
+    background: #ffc000;
+    border: 0;
+    outline: none;
+    border-radius: 50%;
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 12pt;
+    box-shadow: 0 0 15px #ffc000
+} 
+
+.header .header-card .line{
+    width: 50px;
+    height: 2px;
+    background:  #ffc000;
+}

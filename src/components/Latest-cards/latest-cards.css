@@ -1,0 +1,7 @@
+.latest-cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    width: 90%;
+    justify-items: center;
+}

@@ -1,0 +1,29 @@
+.Latest{
+    background: #faf9f6;
+}
+
+.latest-wrapper{
+    width: 90%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 20px 0;
+}
+.latest-wrapper h2 {
+    font-weight: 500;
+    font-size: 20pt;
+}
+.latest-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 90% !important;
+    
+}
+/* .latest-content-wrapper>div:nth-child(1){
+    background-color:white;
+
+} */
+.latest-content-wrapper>div:nth-child(2){
+    width:66.66%;
+
+}

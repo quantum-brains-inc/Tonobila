@@ -1,0 +1,121 @@
+.card{
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 20px;
+    display: inline-block;
+    /* min-width: 210px; */
+    width:250px;
+    height: 290px;
+    overflow: hidden;
+    background: #fff;
+    position: relative;
+    box-shadow: 1px 1px rgba(116, 116, 116, 0.1);
+    transition: box-shadow .3s ease;
+    -webkit-transition: box-shadow .3s ease;
+    -moz-transition: box-shadow .3s ease;
+    -ms-transition: box-shadow .3s ease;
+    -o-transition: box-shadow .3s ease;
+  }
+  .card:hover{
+    box-shadow: 1px 1px 16px rgba(168, 168, 168, 0.3);
+  }
+  .card-img{
+    width: 200px;
+    height: 180px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+  }
+  .card-img img{
+    height: 100%;
+    text-align: center;
+    position: relative;
+    
+  }
+  .card-img::before{
+    content: '';
+    width: 200px;
+    height: 180px;
+    position: absolute;
+    z-index: 33;
+    top: 20px;
+    background: #ffc00090;
+    cursor: pointer;
+    opacity: 0;
+    transition: all .3s ease ;
+    -webkit-transition: all .3s ease ;
+    -moz-transition: all .3s ease ;
+    -ms-transition: all .3s ease ;
+    -o-transition: all .3s ease ;
+  }
+  .card:hover .card-img::before{
+    opacity: 1;
+  }
+  .card:hover .pics-icon{
+    animation: anime .3s forwards;
+    -webkit-animation: anime .3s forwards;
+  }
+  .card-line{
+    width: 35px;
+    height: 2px;
+    background: #ffc000;
+    margin-top: 16px;
+    transition: all ease .3s;
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    -ms-transition: all ease .3s;
+    -o-transition: all ease .3s;
+  }
+  .card:hover .card-line{
+    width: 50px;
+  }
+  h2.card-title {
+    font-size: 12pt;
+    color: #323232;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    cursor: pointer;
+  }
+  
+  .card-bottom{
+    display: flex;
+    justify-content: space-between
+  }
+  p.card-city, p.card-date{
+    font-size: 9pt;
+    color: #818181;
+    margin-top: -4px;
+  }
+  
+  img.pics-icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    height: auto;
+    width: 50px;
+    z-index: 44;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -80%);
+    -moz-transform: translate(-50%, -80%);
+    -ms-transform: translate(-50%, -80%);
+    -o-transform: translate(-50%, -80%);
+  } 
+  @keyframes anime {
+    0%{
+      opacity: 0;
+      
+  }
+    100%{
+      opacity: 1;
+      transform: translate(-50%, -100%);
+      -webkit-transform: translate(-50%, -100%);
+      -moz-transform: translate(-50%, -100%);
+      -ms-transform: translate(-50%, -100%);
+      -o-transform: translate(-50%, -100%);
+  }
+  }
