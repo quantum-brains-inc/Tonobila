@@ -25,7 +25,14 @@
 }
 
 .footer-menu>ul li{
+    cursor: pointer;
     margin-bottom: 3px;
+    position: all ease .3s
+}
+.footer-menu>ul ul li:hover{
+    cursor: pointer;
+    margin-bottom: 3px;
+    color: #323232;
 }
 .footer .footer-social{
     text-align: end

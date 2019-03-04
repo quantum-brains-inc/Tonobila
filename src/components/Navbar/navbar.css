@@ -1,7 +1,6 @@
 nav{
     display: flex;
     justify-content: space-between;
-    align-items: center;
     max-width: 1170px;
     padding: 8px 0;
     margin: 0 auto;
@@ -12,6 +11,12 @@ nav .menu ul li{
     margin: 0 1.2rem;
     text-decoration: none;
     list-style: none
+}
+nav .menu ul li:nth-child(5){
+    margin: 0 5px 0 1.2rem;
+}
+nav .menu ul li:nth-child(6){
+    margin: 0;
 }
 nav a {
     color: #333333; 
@@ -35,4 +40,78 @@ nav a {
     background: #ffffff;
     position: fixed;
     z-index: 999999999999;
+    transition:0.3s;
 }
+@media (min-width: 992px) and (max-width: 1199px) { 
+    nav{
+        max-width: 970px;  
+    }
+
+}
+@media (min-width: 768px) and (max-width: 991px) { 
+    nav{
+        max-width: 750px;  
+    }
+    nav .menu ul li{
+        margin: 0 10px;
+    }
+ }
+
+ @media (max-Width :767px){
+    nav{
+        width: auto;  
+        overflow: hidden;
+        transition:0.3s;
+        padding:10px 20px;
+    }
+    nav .menu ul{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 0 0;; 
+    }
+    nav .menu{
+        margin:50px 0;
+    }
+    nav .menu ul li{
+        margin: 20px;
+        text-decoration: none;
+        list-style: none
+    }
+    nav .menu ul li:nth-child(5){
+        margin:10px;
+    }
+    nav{
+        height:40px;
+    } 
+    .navOpen{ 
+        height:auto;
+        min-height:1000px;  
+        transition:0.5s
+    }
+    .burger-menu{
+        display: block;
+        padding: 10px 0px 10px 0;
+        cursor: pointer;
+        width: 25px;
+    }
+    .burger-menu div{
+        width: 25px;
+        height: 3px;
+        margin: 5px 0;
+        background-color: #818181;
+        border-radius: 15px;
+        transition: 0.5s;
+    }
+    .firstBAR{
+        transform: rotate(-45deg) translate(-11px, 6px);
+        width: 2px;
+    }
+    .secBAR{
+        transform:rotate(-45deg) translate(-5px, 0px);
+    }
+    .thirdBAR{
+        transform:rotate(45deg) translate(-5px, 0px);
+    }
+ }

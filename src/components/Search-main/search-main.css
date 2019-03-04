@@ -21,7 +21,7 @@
 }
 .form-search-main select{
     height: 40px;
-    width:200px;
+    width: 320px;
     border:none;
     background:#faf9f6;
     padding:5px;
@@ -34,4 +34,5 @@
 }
 .form-search-main button{
     margin-top:20px;
+    width: 180px;
 }
