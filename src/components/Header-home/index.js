@@ -12,6 +12,7 @@ const Header = () => {
                 </div>
                 <button>+</button>
             </div>
+            <div className='respo-Annonce'>DÉPOSEZ VOTRE ANNONCE</div>
         </div>
     )
 }

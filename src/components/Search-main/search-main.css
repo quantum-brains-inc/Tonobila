@@ -12,8 +12,9 @@
     flex-direction: column;
     justify-content: flex-start;
     box-sizing: border-box;
+    align-items: center;
 }
-.form-search-main h1{
+.search-main>h1{
     font-weight:500;
     font-size: 20pt;
     padding: 0;
