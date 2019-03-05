@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './navbar.css'
+import logo from '../../images/logo.png'
 
 
 class Navbar extends Component{
@@ -11,8 +12,11 @@ class Navbar extends Component{
     let barONE=[];
     let barTWO=[];
     let barTHREE=[];
-    let navClasses=[]
+    let navClasses=[];
 
+    const clickLinksHandler=()=>{
+      this.setState({burgerClicked:false})
+    }
     const burgerClicked=()=>{ 
       this.setState({burgerClicked: !this.state.burgerClicked});
     }
@@ -36,15 +40,15 @@ class Navbar extends Component{
     return(
     <div className='Navbar'>
       <nav className={navClasses}>
-        <div className="logo"><img src="./images/logo.png" alt="Logo"/></div>
+        <div className="logo"><img src={logo} width="45px" alt="Logo"/></div>
         <div className="menu">
           <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Annonces</a></li>
-            <li><a href="#">Magazine</a></li>
-            <li><a href="#">Contactez nous</a></li>
-            <li className='sign-in'><button>Sign In</button></li>
-            <li className='sign-up'><button>Sign Up</button></li>
+            <li><a href="#" onClick={clickLinksHandler} >Accueil</a></li>
+            <li><a href="#" onClick={clickLinksHandler} >Annonces</a></li>
+            <li><a href="#" onClick={clickLinksHandler} >Magazine</a></li>
+            <li><a href="#" onClick={clickLinksHandler} >Contactez nous</a></li>
+            <li className='sign-in'><button onClick={clickLinksHandler} >Sign In</button></li>
+            <li className='sign-up'><button onClick={clickLinksHandler}>  Sign Up</button></li>
           </ul>
         </div>
         {burger}

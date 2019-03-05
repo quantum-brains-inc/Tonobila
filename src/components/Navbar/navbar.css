@@ -27,14 +27,9 @@ nav a {
     color: #323232;
     font-weight: normal;
 }
-/* .sign-up button{
-    background: #ffc000;
-    border-radius: 50px;
-    padding: 5px 20px;
-    color: #ffffff;
-    font-weight: bolder;
-    box-shadow: 0 0 15px #ffc000
-} */
+.burger-menu{
+    display:none;
+}
 .Navbar{
     width: 100%;
     background: #ffffff;
