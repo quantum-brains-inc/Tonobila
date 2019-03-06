@@ -81,9 +81,8 @@ nav a {
         height:40px;
     } 
     .navOpen{ 
-        height:auto;
-        min-height:1000px;  
-        transition:0.5s
+        height:850px;
+        transition:ease 1s;
     }
     .burger-menu{
         display: block;
