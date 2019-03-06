@@ -37,6 +37,11 @@ nav a {
     z-index: 999999999999;
     transition:0.3s;
 }
+.logo{
+    width:45px;
+    margin:0;
+    padding:0
+}
 @media (min-width: 992px) and (max-width: 1199px) { 
     nav{
         max-width: 970px;  
@@ -64,7 +69,8 @@ nav a {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 50px 0 0;; 
+        padding: 50px 0 0;
+        text-align: center;
     }
     nav .menu{
         margin:50px 0;
@@ -88,7 +94,7 @@ nav a {
         display: block;
         padding: 10px 0px 10px 0;
         cursor: pointer;
-        width: 25px;
+        width: 40px;
     }
     .burger-menu div{
         width: 25px;

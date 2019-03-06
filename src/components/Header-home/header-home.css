@@ -64,6 +64,8 @@
 @media (min-width: 992px) and (max-width: 1199px) { 
     .header{
         max-width:970px;
+        /* height: 70vh; */
+
     }
 
 }
@@ -76,6 +78,7 @@
  @media (max-Width :767px){
     .header{
         max-width:auto;
+        height: 60vh;
     }
     .header .header-card{
         display:none;

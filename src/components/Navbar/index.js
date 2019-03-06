@@ -40,7 +40,7 @@ class Navbar extends Component{
     return(
     <div className='Navbar'>
       <nav className={navClasses}>
-        <div className="logo"><img src={logo} width="45px" alt="Logo"/></div>
+        <div className="logo"><img src={logo} className="logo"alt="Logo"/></div>
         <div className="menu">
           <ul>
             <li><a href="#" onClick={clickLinksHandler} >Accueil</a></li>
