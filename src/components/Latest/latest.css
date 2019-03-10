@@ -19,3 +19,23 @@
     justify-content: space-between;
     margin: 0 auto;  
 }
+
+@media (min-width: 992px) and (max-width: 1199px) { 
+    .Latest{
+        width: 970px ;
+    }
+    .latest-content-wrapper {
+        flex-direction: column; 
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) { 
+    .Latest{
+        width: 750px ;
+    }
+}
+
+@media (max-Width :767px) {
+    .Latest{
+        width: auto ;
+    }
+}

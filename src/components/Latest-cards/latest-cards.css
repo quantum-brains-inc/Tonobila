@@ -6,3 +6,17 @@
     /* width: 100%;
     justify-items: center; */
 }
+@media (min-width: 992px) and (max-width: 1199px) { 
+    .latest-cards-container {
+     margin-top:30px;
+     grid-template-columns: 240px 240px 240px;
+     justify-content: space-between;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) { 
+ 
+}
+
+@media (max-Width :767px) {
+  
+}

@@ -13,8 +13,8 @@ class App extends Component {
         <Navbar />
         <Header />
         <div className="back-ground">
-          {/* <Latest />
-          <AdBanner/>
+          <Latest />
+          {/* <AdBanner/>
           <Actuality/> */}
           <Footer/>
         </div>

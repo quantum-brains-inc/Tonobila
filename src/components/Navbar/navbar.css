@@ -29,6 +29,28 @@ nav a {
 }
 .burger-menu{
     display:none;
+    height:40px;
+    padding: 10px 0px 10px 0;
+    cursor: pointer;
+    width: 40px;
+}
+.burger-menu div{
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #818181;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+.firstBAR{
+    transform: rotate(-45deg) translate(-11px, 6px);
+    width: 2px;
+}
+.secBAR{
+    transform:rotate(-45deg) translate(-5px, 0px);
+}
+.thirdBAR{
+    transform:rotate(45deg) translate(-5px, 0px);
 }
 .Navbar{
     width: 100%;
@@ -92,26 +114,5 @@ nav a {
     }
     .burger-menu{
         display: block;
-        padding: 10px 0px 10px 0;
-        cursor: pointer;
-        width: 40px;
-    }
-    .burger-menu div{
-        width: 25px;
-        height: 3px;
-        margin: 5px 0;
-        background-color: #818181;
-        border-radius: 15px;
-        transition: 0.5s;
-    }
-    .firstBAR{
-        transform: rotate(-45deg) translate(-11px, 6px);
-        width: 2px;
-    }
-    .secBAR{
-        transform:rotate(-45deg) translate(-5px, 0px);
-    }
-    .thirdBAR{
-        transform:rotate(45deg) translate(-5px, 0px);
     }
  }

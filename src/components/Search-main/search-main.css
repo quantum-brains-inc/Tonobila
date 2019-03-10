@@ -6,9 +6,8 @@
 }
 
 .form-search-main{
-    height: 100%;
+    /* height: 100%; */
     display:flex;
-    /* padding: 50px 0; */
     flex-direction: column;
     justify-content: flex-start;
     box-sizing: border-box;
@@ -36,4 +35,27 @@
 .form-search-main button{
     margin-top:20px;
     width: 180px;
+}
+@media (min-width: 992px) and (max-width: 1199px) { 
+    .form-search-main{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 40px;
+        margin-bottom:50px
+    } 
+    .form-search-main select{
+        width:auto;
+        margin:0;
+    }
+    .form-search-main button{
+        margin:0px auto ;
+        width: 180px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) { 
+ 
+}
+
+@media (max-Width :767px) {
+  
 }
