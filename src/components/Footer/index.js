@@ -40,9 +40,9 @@ import './Footer.css';
       </div>
       <div className='footer-social'>
           <p>Follow us on social media</p>
-          <a href="#"><i class="fab fa-instagram" /></a>
-          <a href="#"><i class="fab fa-facebook" /></a>
-          <a href="#"><i class="fab fa-twitter" /></a>
+          <a href="#"><i className="fab fa-instagram" /></a>
+          <a href="#"><i className="fab fa-facebook" /></a>
+          <a href="#"><i className="fab fa-twitter" /></a>
       </div>
     </div>
   )

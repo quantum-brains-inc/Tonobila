@@ -14,8 +14,8 @@ class App extends Component {
         <Header />
         <div className="back-ground">
           <Latest />
-          {/* <AdBanner/>
-          <Actuality/> */}
+          <AdBanner/>
+          <Actuality/>
           <Footer/>
         </div>
       </div>

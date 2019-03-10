@@ -11,3 +11,25 @@
     display: flex;
     justify-content: space-between
 }
+
+@media (min-width: 992px) and (max-width: 1199px) { 
+    .actuality{
+        width: 970px;
+    }
+  }
+  
+  @media  (max-width: 991px) { 
+    .actuality{
+        width: 750px;
+    }
+    .actuality .actuality-container{
+        flex-direction: column;
+    }
+  }
+  
+  @media (max-Width :767px) {
+    .actuality{
+        width: auto;  
+        margin:0 30px
+    }
+  }

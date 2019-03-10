@@ -1,12 +1,12 @@
 .card{
-box-sizing: border-box;
-width: 240px;
-padding: 20px;
-overflow: hidden;
-background: #ffffff;
-position: relative;
-box-shadow: 1px 1px rgba(116, 116, 116, 0.1);
-transition: box-shadow .3s ease;
+  box-sizing: border-box;
+  width: 240px;
+  padding: 20px;
+  overflow: hidden;
+  background: #ffffff;
+  position: relative;
+  box-shadow: 1px 1px rgba(116, 116, 116, 0.1);
+  transition: box-shadow .3s ease;
 }
 .card:hover{
   box-shadow: 1px 1px 16px rgba(168, 168, 168, 0.3);
@@ -89,5 +89,30 @@ img.pics-icon{
   100%{
     opacity: 1;
     transform: translate(-50%, -100%);
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) { 
+  .card{
+    width:303px;
+  }
+  .card-img{
+    width: 260px;
+    height:221px
+  }
+}
+@media (max-Width :767px) {
+  .form-search-main{
+      grid-template-columns: 1fr ;
+  }
+  .card{
+    width:auto;
+  }
+  .card-img{
+    width: 260px;
+    height:221px
+  }
+  .card-img::before{
+    width: 260px;
+    height:221px
   }
 }

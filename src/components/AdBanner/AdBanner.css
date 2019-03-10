@@ -14,3 +14,20 @@
 
 
 }
+@media (min-width: 992px) and (max-width: 1199px) { 
+    .ad{
+        width: 970px ;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) { 
+    .ad{
+        width: 750px ;
+    }
+}
+
+@media (max-Width :767px) {
+    .ad{
+        width: auto ;
+        margin: 0 30px;
+    }
+}

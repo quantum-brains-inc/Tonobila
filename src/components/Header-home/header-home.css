@@ -1,6 +1,13 @@
+.header-container{
+    height:70vh;
+    background: url('../../images/tesla.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center top;
+}
 .header{
     max-width: 1170px;
-    height: 80vh;
+    height: 100%;
     margin: 0 auto;
     display:flex;
     flex-direction: column-reverse;
@@ -62,10 +69,11 @@
     margin:50px auto;
 }
 @media (min-width: 992px) and (max-width: 1199px) { 
+    .header-container{
+        height:560px;
+    }
     .header{
         max-width:970px;
-        /* height: 70vh; */
-
     }
 
 }
@@ -78,7 +86,7 @@
  @media (max-Width :767px){
     .header{
         max-width:auto;
-        height: 60vh;
+        /* height: 60vh; */
     }
     .header .header-card{
         display:none;

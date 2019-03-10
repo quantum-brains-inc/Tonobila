@@ -77,46 +77,26 @@ p.Blog-card-city, p.Blog-card-date{
   bottom: 0;
   right: 0
 }
-  /* 
-.Blog-card:hover .Blog-card-img::before{
-    opacity: 1;
+@media  (max-width: 1199px) { 
+  .blog-card-right-side{
+    margin-left:20px
   }
-  .Blog-card:hover .pics-icon{
-    animation: anime .3s forwards;
-    -webkit-animation: anime .3s forwards;
+}
+@media  (max-width: 991px) { 
+  .BlogCard{
+    width: auto;
+    margin:15px 0;
+    flex-direction: column;
   }
+  .blog-card-img{
+    width: 260px;
+    height:221px;
+  }
+  .blog-card-right-side{
+    max-width:400px   
+  }
+}
 
-  .Blog-card:hover .Blog-card-line{
-    width: 50px;
-  }
-
-
-  
-  img.pics-icon{
-    position: absolute;
-    top: 46%;
-    left: 50%;
-    height: auto;
-    width: 50px;
-    z-index: 44;
-    cursor: pointer;
-    opacity: 0;
-    transform: translate(-50%, -80%);
-    -moz-transform: translate(-50%, -80%);
-    -ms-transform: translate(-50%, -80%);
-    -o-transform: translate(-50%, -80%);
-  } 
-  @keyframes anime {
-    0%{
-      opacity: 0;
-      
-  }
-    100%{
-      opacity: 1;
-      transform: translate(-50%, -100%);
-      -webkit-transform: translate(-50%, -100%);
-      -moz-transform: translate(-50%, -100%);
-      -ms-transform: translate(-50%, -100%);
-      -o-transform: translate(-50%, -100%);
-  }
-  } */
+@media (max-Width :767px) {
+ 
+}

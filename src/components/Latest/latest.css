@@ -20,7 +20,7 @@
     margin: 0 auto;  
 }
 
-@media (min-width: 992px) and (max-width: 1199px) { 
+@media  (max-width: 1199px) { 
     .Latest{
         width: 970px ;
     }
@@ -37,5 +37,6 @@
 @media (max-Width :767px) {
     .Latest{
         width: auto ;
+        padding:30px 30px;
     }
 }
