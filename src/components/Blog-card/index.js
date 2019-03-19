@@ -16,10 +16,16 @@ const BlogCard = ()=> {
         </div>
       </div>
       <div className="blog-card-right-side">
-        <h1 className="blog-card-title">Teslas Are Getting a “Party
-and Camping Mode”</h1>
-        <p>The new modes would also Tesla owners to power various electronic devices directly from the car’s remaining battery reserves — a big battery means plenty of juice for running air conditioning systems and music while powering things like coolers or external lights...</p>
-        <button className="blog-card-more">Read more</button>
+        <div>
+          <h1 className="blog-card-title">
+          Teslas Are Getting a “Party
+            and Camping Mode”
+          </h1>
+          <p>The new modes would also Tesla owners to power various electronic devices directly from the car’s remaining battery reserves — a big battery means plenty of juice for running air conditioning systems and music while powering things like coolers or external lights...</p>
+        </div>
+        <div>
+          <button className="blog-card-more">Read more</button>
+        </div>
       </div>
       
     </div>

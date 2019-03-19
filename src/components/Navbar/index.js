@@ -47,7 +47,7 @@ class Navbar extends Component{
             <li><a href="#" onClick={clickLinksHandler} >Annonces</a></li>
             <li><a href="#" onClick={clickLinksHandler} >Magazine</a></li>
             <li><a href="#" onClick={clickLinksHandler} >Contactez nous</a></li>
-            <li className='sign-in'><button onClick={clickLinksHandler} >Sign In</button></li>
+            <li className='sign-in' id="bebe"><button onClick={clickLinksHandler} >Sign In</button></li>
             <li className='sign-up'><button onClick={clickLinksHandler}>  Sign Up</button></li>
           </ul>
         </div>

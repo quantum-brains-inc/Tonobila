@@ -10,6 +10,30 @@ body {
   background-position: center top; */
 } 
 
+/* scrollBat style start */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffae00; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e49c00; 
+}   
+
+/* scrollBat style end */
+
 a{
   text-decoration: none
 }
