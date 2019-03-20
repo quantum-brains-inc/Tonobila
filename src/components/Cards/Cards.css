@@ -99,6 +99,10 @@ img.pics-icon{
     width: 260px;
     height:221px
   }
+  .card-img::before {
+    width: 260px;
+    height: 221px;
+  }
 }
 @media (max-Width :767px) {
   .form-search-main{
@@ -112,7 +116,7 @@ img.pics-icon{
     height:221px
   }
   .card-img::before{
-    width: 260px;
-    height:221px
+    width:calc(100% - 40px);
+    height: 190px;
   }
 }

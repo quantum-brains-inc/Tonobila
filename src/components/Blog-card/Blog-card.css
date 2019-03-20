@@ -98,16 +98,28 @@ p.Blog-card-city, p.Blog-card-date{
 }
 
 @media (max-Width :767px) {
+  .blog-card-img{
+    width: 200px;
+    height:170px;
+  } 
+}
+@media (max-width:520px)  { 
   .BlogCard{
     width: auto;
     margin:15px 0;
     flex-direction: column;
   }
-  .blog-card-img{
-    /* max-width: 766px; */
-    height:221px;
+  .blog-card-img {
+    width: 100%;
+    height: 200px;
   }
-  .blog-card-right-side{
-    max-width:400px   
+  .blog-card-right-side {
+    margin-left: 0;
   }
+  .blog-card-right-side>div:nth-child(1) {
+    margin: 10px 0 20px;
+  }
+  /* .card-img {
+    width: 100%;
+  } */
 }
