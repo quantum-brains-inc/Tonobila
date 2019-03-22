@@ -33,7 +33,7 @@
 
 }
 .form-search-main button{
-    margin:20px 0 45px;
+    margin-top:20px;
     width: 180px;
 }
 @media  (max-width: 1199px) { 

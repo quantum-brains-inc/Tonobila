@@ -4,10 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Cairo', sans-serif;
-  /* background: url('images/tesla.jpg') no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center top; */
+  background: #f5f4f1;
 } 
 
 /* scrollBat style start */

@@ -1,0 +1,21 @@
+.back-ground{
+    background: #f5f4f1;
+    height: 100%;
+}
+button{
+    border: 0;
+    outline: 0;
+    background: #ffae00;
+    border-radius: 50px;
+    padding: 9px 20px;     
+    font-weight: bolder;
+    color: #ffffff;
+    font-size: 9pt;
+    box-shadow: 0 0 15px #ffae00;
+    margin: 0;
+    cursor: pointer;
+    transition: box-shadow ease .3s;
+}
+button:hover{
+    box-shadow: 0 0 0px #ffae00;
+}

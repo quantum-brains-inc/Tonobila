@@ -2,7 +2,7 @@ import React from 'react'
 import './Blog-card.css'
 import Car from '../../images/tesla.jpg';
 import Icon from '../../images/photo.png'
-
+import {Link} from "react-router-dom";
 const BlogCard = ()=> {
   return (
     <div className="BlogCard" >
@@ -24,7 +24,10 @@ const BlogCard = ()=> {
           <p>The new modes would also Tesla owners to power various electronic devices directly from the car’s remaining battery reserves — a big battery means plenty of juice for running air conditioning systems and music while powering things like coolers or external lights...</p>
         </div>
         <div>
-          <button className="blog-card-more">Read more</button>
+        <Link to="/ff">
+            <button className="blog-card-more" >
+            Read more</button>
+          </Link>
         </div>
       </div>
       

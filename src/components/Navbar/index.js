@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './navbar.css'
-import logo from '../../images/logo.png'
+import logo from '../../images/logo.svg';
+import {NavLink, Link} from "react-router-dom";
 
 
 class Navbar extends Component{
@@ -40,13 +41,13 @@ class Navbar extends Component{
     return(
     <div className='Navbar'>
       <nav className={navClasses}>
-        <div className="logo"><img src={logo} className="logo"alt="Logo"/></div>
+        <div className="logo"><Link to='/'><img src={logo} className="logo"alt="Logo"/></Link></div>
         <div className="menu">
           <ul>
-            <li><a href="#" onClick={clickLinksHandler} >Accueil</a></li>
-            <li><a href="#" onClick={clickLinksHandler} >Annonces</a></li>
-            <li><a href="#" onClick={clickLinksHandler} >Magazine</a></li>
-            <li><a href="#" onClick={clickLinksHandler} >Contactez nous</a></li>
+            <li><NavLink to="/" onClick={clickLinksHandler} >Accueil</NavLink></li>
+            <li><NavLink to="/annonces" onClick={clickLinksHandler} >Annonces</NavLink></li>
+            <li><NavLink to="/" onClick={clickLinksHandler} >Magazine</NavLink></li>
+            <li><NavLink to="/" onClick={clickLinksHandler} >Contactez nous</NavLink></li>
             <li className='sign-in' id="bebe"><button onClick={clickLinksHandler} >Sign In</button></li>
             <li className='sign-up'><button onClick={clickLinksHandler}>  Sign Up</button></li>
           </ul>
