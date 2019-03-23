@@ -1,6 +1,6 @@
 .SignupMain{
     padding-top: 10rem !important;
-    max-width: 1170px;
+    max-width: 20rem;
     height: 80vh;
     margin: 0 auto;
 }
@@ -10,8 +10,8 @@
     align-items:center;
 }
 .SignupCard>h1 {
-    position: relative;
-    left: -1rem;
+    margin-right:auto;
+    font-weight: 400
 }
 .SignupCard{
     font-weight: 600;
@@ -38,4 +38,24 @@
     padding: 5px 35px;
     font-size: 14px;
     font-weight: bold;
+}
+.Signup_form form input, .Signup_form form label{
+    display: block;
+    width:100%;
+}
+.Signup_form form input {
+    margin:2px 0 20px;
+    height: 30px;
+    border: none;
+    background-color: #faf9f6;
+    outline: none;
+}
+.Signup_form {
+    width: 20rem;
+    color: #818181
+}
+.Signup_form div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
 }
