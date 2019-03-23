@@ -28,6 +28,10 @@
     .latest-content-wrapper {
         flex-direction: column; 
     }
+    .latest-content-wrapper {
+        align-items: stretch;
+        
+    }
 }
 @media (min-width: 768px) and (max-width: 991px) { 
     .Latest{

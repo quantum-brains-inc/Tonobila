@@ -63,7 +63,7 @@ nav a {
     width: 120px;
     margin: 5px 0 0;
     padding:0;
-    /* color:red */
+    
 }
 @media (min-width: 992px) and (max-width: 1199px) { 
     nav{
@@ -126,6 +126,11 @@ nav a {
         width: 100px;
         margin: 2px 0 0;
         padding:0;
+        
+    }
+    .logo-cont{
+        width: 34px;
+        overflow: hidden
     }
     .navOpen{ 
         height:850px;
@@ -135,3 +140,5 @@ nav a {
         display: block;
     }
  }
+
+ 
