@@ -11,6 +11,7 @@ import Signin from './components/Signin'
 import ScrollToTop from 'react-router-scroll-top'
 import { BrowserRouter as Router , Route, Switch, Redirect } from "react-router-dom";
 import CookieConsent from "react-cookie-consent";
+import AddPost from './components/AddPost'
 
 class App extends Component {
  render() {
@@ -25,12 +26,13 @@ class App extends Component {
                         <Route exact path="/error" component={Error}/>
                         <Route exact path="/signup" component={Signup}/>
                         <Route exact path="/signin" component={Signin}/>
+                        <Route exact path="/add" component={AddPost}/>
                         <Route path="*" render={() => <Redirect to="/Error" />} />
                     </Switch>
                     <Footer/>
                     <CookieConsent
                         location="bottom"
-                        buttonText="Got It!"
+                        buttonText="Got ItT!"
                         style={{ background: "#333333",alignItems:'center',height:'70px' }}
                         buttonStyle={{ color: "#ffae00", fontSize: "13px" ,backgroundColor:'#333333',padding:'10px 25px',border:'2px solid #ffae00'}}
                     >

@@ -1,5 +1,6 @@
 import React from 'react'
 import './header-home.css'
+import {Link} from 'react-router-dom'
 
 const Header = () => {
     return(
@@ -11,7 +12,7 @@ const Header = () => {
                         <div className="line"></div>
                         <p>Dépot d’annonces gratuit pour vendre tout type de voiture au maroc.</p>
                     </div>
-                    <button>+</button>
+                    <Link to="/add"><button id="addPost_home_plus"></button></Link>
                 </div>
                 <div className='respo-Annonce'>DÉPOSEZ VOTRE ANNONCE</div>
             </div>

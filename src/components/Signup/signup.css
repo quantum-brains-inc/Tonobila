@@ -1,8 +1,12 @@
+#SignupMain{
+    padding: 7rem 0 !important;
+}
 .SignupMain{
-    padding-top: 10rem !important;
+    padding: 12rem 0 ;
     max-width: 20rem;
-    height: 80vh;
+    /* height: 80vh; */
     margin: 0 auto;
+    /* background:red */
 }
 .SignupCard {
     display:flex;
@@ -59,3 +63,26 @@
     justify-content: space-between;
     margin-top: 50px;
 }
+@media (min-width: 1200px) and (max-width: 1400px) { 
+    .SignupMain{
+        padding: 10rem 0 ;
+    }
+  }
+@media (min-width: 992px) and (max-width: 1199px) { 
+    .SignupMain{
+        padding: 8rem 0 ;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 991px) { 
+    .SignupMain{
+        padding: 8rem 0 ;
+    }
+  }
+  
+  @media (max-Width :767px) {
+    .SignupMain{
+        padding: 5rem 0 ;
+    }
+  
+  }

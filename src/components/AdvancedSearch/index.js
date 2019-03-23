@@ -11,8 +11,8 @@ export default class SearchMain extends Component {
           <select><option value="ville">ville</option></select>
           <select><option value="annee">annee</option></select>
           <select><option value="modele">modele</option></select>
-          <select><option value="prix max">prix max</option></select>
-          <select><option value="prix max">prix max</option></select>
+          <select><option value="prix max">kilometrage</option></select>
+          <select><option value="prix max">couleur exterieur</option></select>
           <select><option value="prix max">prix max</option></select>
           <select><option value="prix max">prix max</option></select>
           <select><option value="prix max">prix max</option></select>

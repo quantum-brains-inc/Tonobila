@@ -1,0 +1,21 @@
+.importPic{
+    width:220px;
+    height:220px;
+    background:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width: 768px) and (max-width: 991px) { 
+    .importPic{
+        width:355px;
+        height:355px;
+    } 
+}
+@media (max-Width :500px) {
+    .importPic {
+        width: 100%;
+        height: 300px;
+    } 
+}
+

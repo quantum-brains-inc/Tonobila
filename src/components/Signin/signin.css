@@ -4,6 +4,12 @@
     height: 80vh;
     margin: 0 auto;
 }
+/* .SignupMain{
+    padding-top: 10rem !important;
+    max-width: 1170px;
+    height: 80vh;
+    margin: 0 auto;
+}
 .SignupCard {
     display:flex;
     flex-direction: column;

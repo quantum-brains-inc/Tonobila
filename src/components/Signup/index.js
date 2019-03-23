@@ -4,7 +4,7 @@ import './signup.css';
 class Signup extends Component {
     render() {
         return (
-            <div className="SignupMain">
+            <div className="SignupMain" id="SignupMain">
             
                 <div className="SignupCard">
                     <h1>Sign Up</h1>

@@ -67,6 +67,15 @@
     cursor: pointer;
     transition: box-shadow ease .3s;
     margin:50px auto;
+
+}
+#addPost_home_plus{
+    display:flex;
+    justify-content:center; 
+    align-items: center;
+}
+#addPost_home_plus::before{
+    content:'+';    
 }
 @media (min-width: 992px) and (max-width: 1199px) { 
     .header-container{
