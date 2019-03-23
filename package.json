@@ -4,8 +4,10 @@
   "private": true,
   "dependencies": {
     "react": "^16.8.3",
+    "react-cookie-consent": "^2.2.2",
     "react-dom": "^16.8.3",
     "react-router-dom": "^5.0.0",
+    "react-router-scroll-top": "^0.1.1",
     "react-scripts": "2.1.5"
   },
   "scripts": {

@@ -1,0 +1,151 @@
+.background-container{
+    background-color: #f5f4f1;
+
+}
+
+.article-container{
+    max-width: 1170px;
+    margin: 0 auto;    
+    display: flex;
+    justify-content: space-between;
+    padding-top:50px;
+    line-height: 30px
+    
+}
+
+.div1{
+    width: 80%;
+    
+}
+.div1 h1{
+    padding-top: 2.5rem;
+}
+.div1 p{
+    width: 80%;
+    
+    
+    
+}
+.yellow-line{
+    height: 2px;
+    background:#ffc000;
+    width: 8rem;
+}
+.div2{
+    background-color: white; 
+    color: grey;
+    width: 40%;
+    text-align: center;
+    height: 50rem;
+    margin-top: 4rem;
+  
+}
+
+.div2 p {
+    padding-top:20rem;
+    font-size: 3rem;
+    
+}
+.imagecar{
+    width:80%;
+}
+
+@media  (min-width: 992px) and (max-width: 1199px) { 
+    .div2{
+        display: none;
+    }
+    .article-container{
+        width: 970px;
+        margin:0 auto;
+           
+    }
+    .div1{
+        margin: 0 auto;
+    }
+    .div1 p{
+        
+        width: 100% !important;
+        margin:0 auto;
+    }
+    .yellow-line{
+        margin-bottom: 1rem;
+    }
+    .imagecar{
+        width:100%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;  
+    }
+
+ }
+
+  
+  @media  (max-width: 991px) { 
+
+    .article-container{
+        width: 750px;
+        margin:0 auto;
+           
+    }
+    .div1{
+        width:100%;
+    }
+
+    .div2{
+        display: none;
+    }
+
+    .div1 p{
+        width: 100%;  
+        
+    }
+    .imagecar{
+        width:100%;
+    }
+    
+    
+  }
+  
+  @media (max-Width :767px) {
+    .div2{
+        display: none;
+    }
+    .article-container{
+        width: auto;  
+        margin:0 30px
+           
+    }
+    .div1{
+        width:100%;
+        
+    }
+    .div1 p{
+        width: 100%;
+        
+    }
+    .imagecar{
+        width:100%;
+    }
+  }
+
+  /* -------------------------
+  @media (min-width: 992px) and (max-width: 1199px) { 
+    .article-container{
+        width: 970px;
+    }
+  }
+  
+  @media  (max-width: 991px) { 
+    .actuality{
+        width: 750px;
+    }
+    .actuality .actuality-container{
+        flex-direction: column;
+    }
+  }
+  
+  @media (max-Width :767px) {
+    .actuality{
+        width: auto;  
+        margin:0 30px
+    }
+  } */

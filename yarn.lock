@@ -5759,6 +5759,11 @@ joi@^11.1.1:
     isemail "3.x.x"
     topo "2.x.x"
 
+js-cookie@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/js-cookie/-/js-cookie-2.2.0.tgz#1b2c279a6eece380a12168b92485265b35b1effb"
+  integrity sha1-Gywnmm7s44ChIWi5JIUmWzWx7/s=
+
 js-levenshtein@^1.1.3:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/js-levenshtein/-/js-levenshtein-1.1.4.tgz#3a56e3cbf589ca0081eb22cd9ba0b1290a16d26e"
@@ -8153,6 +8158,13 @@ react-app-polyfill@^0.2.1:
     raf "3.4.1"
     whatwg-fetch "3.0.0"
 
+react-cookie-consent@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/react-cookie-consent/-/react-cookie-consent-2.2.2.tgz#2178f8f42e2268dede8654475bb1f82cd03d9197"
+  integrity sha512-oPLcXEOeAVt2f3ILqf/fQ5F5bR04bGtlZeDnvaZbS2qCDhrktubVZT2JAu3T5vwLB3LZjSi4nHVQlvZ6OVdcUQ==
+  dependencies:
+    js-cookie "^2.2.0"
+
 react-dev-utils@^7.0.3:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-7.0.3.tgz#f1316cfffd792fd41b0c28ad5db86c1d74484d6f"
@@ -8215,6 +8227,11 @@ react-router-dom@^5.0.0:
     react-router "5.0.0"
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
+
+react-router-scroll-top@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/react-router-scroll-top/-/react-router-scroll-top-0.1.1.tgz#83ac4c2d0d26b349069b33e95a0add8ff90713c1"
+  integrity sha1-g6xMLQ0ms0kGmzPpWgrdj/kHE8E=
 
 react-router@5.0.0:
   version "5.0.0"

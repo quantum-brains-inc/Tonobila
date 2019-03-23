@@ -24,10 +24,10 @@ const BlogCard = ()=> {
           <p>The new modes would also Tesla owners to power various electronic devices directly from the car’s remaining battery reserves — a big battery means plenty of juice for running air conditioning systems and music while powering things like coolers or external lights...</p>
         </div>
         <div>
-        <Link to="/ff">
+        <Link to="/article">
             <button className="blog-card-more" >
             Read more</button>
-          </Link>
+        </Link>
         </div>
       </div>
       

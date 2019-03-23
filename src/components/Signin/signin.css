@@ -1,0 +1,41 @@
+.SignupMain{
+    padding-top: 10rem !important;
+    max-width: 1170px;
+    height: 80vh;
+    margin: 0 auto;
+}
+.SignupCard {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+.SignupCard>h1 {
+    position: relative;
+    left: -1rem;
+}
+.SignupCard{
+    font-weight: 600;
+}
+.google-button {
+    white-space: nowrap;
+    width: 20rem;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.google-button__icon {
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+.google-button__icon--plus {
+    width: 27px;
+}
+.google-button__text {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px 35px;
+    font-size: 14px;
+    font-weight: bold;
+}
