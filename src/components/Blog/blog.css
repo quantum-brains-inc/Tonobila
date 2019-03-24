@@ -1,0 +1,21 @@
+.blog-container{
+    width: 1170px;
+    margin: 0 auto;
+
+}
+
+.blog-wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2rem;   
+    
+    
+}
+.blogSection{
+    padding-top: 6rem;
+}
+.teslapic{
+    margin-top: 1rem;
+    width: 80%;
+}

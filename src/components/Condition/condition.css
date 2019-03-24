@@ -1,0 +1,68 @@
+.condition-container{
+    width: 1170px;
+    margin: 0 auto;
+}
+.condition-wrapper{
+    padding: 6rem 0;
+    line-height: 30px
+}
+.teslapic2{
+    width: 100%;
+    margin-top:2rem;
+}
+.lineSection{
+    height: 0.2rem;
+    background-color: #ffae00; 
+    width: 30%;
+    margin: 0 auto;
+}
+
+@media  (min-width: 992px) and (max-width: 1199px) { 
+    
+    .condition-container{
+        width: 970px;
+        margin:0 auto;
+           
+    }
+    .div1{
+        width:auto
+    }
+    .teslapic2{
+        width: 100%;
+        margin-top:2rem;
+    }
+    
+ }
+
+  
+  @media  (max-width: 991px) { 
+    .condition-container{
+        width: 750px;
+        margin:0 auto;
+           
+    }
+
+    .teslapic2{
+        width: 100%;
+        margin-top:2rem;
+    }
+
+    
+  }
+  
+@media (max-Width :767px) {
+    .condition-container{
+        width: auto;  
+        margin:0 auto;
+           
+    }
+    .condition-wrapper{
+        padding: 6rem 20px;
+    }
+    .teslapic2{
+        width: 100%;
+        margin-top:2rem;
+    }
+
+    
+  }

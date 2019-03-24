@@ -1,0 +1,60 @@
+.guidachat-countainer{
+    width: 1170px;
+    margin: 0 auto;
+}
+.topDirection{
+    width: 2rem;
+    height: 2rem;
+    background-color: #ffae00;
+
+}
+.topDirection a{
+    color: white;
+    font-size: 1.5rem;
+    padding-left:30%;
+    line-height: 2.2rem;
+}
+.guidachat-countainer .article-container .teslapic{
+    width:700px;
+    margin-top:20px
+}
+
+@media (max-width: 1199px) { 
+    
+    .guidachat-countainer{
+        width: 970px;
+        margin:0 auto;     
+    }
+    .guidachat-countainer .article-container .teslapic{
+        width:100%; 
+    }
+    
+ }
+ 
+
+  
+  @media  (max-width: 991px) { 
+    .guidachat-countainer{
+        width: 750px;
+        margin:0 auto;
+           
+    }
+    .div2{
+        display: none;
+    }
+    .teslapic{
+        width: 100%;
+    }
+
+    
+  }
+  
+@media (max-Width :767px) {
+    .guidachat-countainer{
+        width: auto;  
+        margin:0 auto;
+           
+    }
+
+    
+  }

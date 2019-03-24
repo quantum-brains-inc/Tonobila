@@ -1,10 +1,16 @@
-.footer{
+.footer,footer a {
     max-width: 1170px ;
     margin: 20px auto;
     color: #818181;
     display: flex;
     justify-content: space-between;
-
+}
+.footer-menu a{
+    color: #818181 ;
+}
+.footer-menu a:hover{
+    color: #818181 ;
+    color: #323232;
 }
 
 .footer-menu>ul{
@@ -30,7 +36,6 @@
 }
 .footer-menu>ul ul li:hover{
     cursor: pointer;
-    margin-bottom: 3px;
     color: #323232;
 }
 .footer .footer-social{

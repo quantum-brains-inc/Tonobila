@@ -12,7 +12,11 @@ import ScrollToTop from 'react-router-scroll-top'
 import { BrowserRouter as Router , Route, Switch, Redirect } from "react-router-dom";
 import CookieConsent from "react-cookie-consent";
 import AddPost from './components/AddPost'
-import Show from './components/Show'
+import Show from './components/Show';
+import Guidachat from './components/Guidachat'
+import Condition from './components/Condition'
+import Blog from './components/Blog'
+import Profile from './components/Profile'
 
 class App extends Component {
  render() {
@@ -29,6 +33,10 @@ class App extends Component {
                         <Route exact path="/signin" component={Signin}/>
                         <Route exact path="/add" component={AddPost}/>
                         <Route exact path="/show" component={Show}/>
+                        <Route exact path="/guidachat" component={Guidachat}/>
+                        <Route exact path="/condition" component={Condition}/>
+                        <Route exact path="/blog" component={Blog}/>
+                        <Route exact path="/profile" component={Profile}/>
                         <Route path="*" render={() => <Redirect to="/Error" />} />
                     </Switch>
                     <Footer/>

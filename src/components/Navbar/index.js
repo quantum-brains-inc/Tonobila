@@ -46,7 +46,7 @@ class Navbar extends Component{
           <ul>
             <li><NavLink to="/" onClick={clickLinksHandler} >Accueil</NavLink></li>
             <li><NavLink to="/annonces" onClick={clickLinksHandler} >Annonces</NavLink></li>
-            <li><NavLink to="/" onClick={clickLinksHandler} >Magazine</NavLink></li>
+            <li><NavLink to="/blog" onClick={clickLinksHandler} >Blog</NavLink></li>
             <li><NavLink to="/" onClick={clickLinksHandler} >Contactez nous</NavLink></li>
             <li className='sign-in' id="bebe"><NavLink to="/signin"><button onClick={clickLinksHandler} >Sign In</button></NavLink></li>
             <li className='sign-up'><NavLink to="/signup"><button onClick={clickLinksHandler} >Sign Up</button></NavLink></li>
