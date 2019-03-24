@@ -9,9 +9,21 @@
 }
 .main_show_card {
     width: 100%;
+    display:flex;
+    justify-content: space-between
 }
-.show .left{
+.show .left, .show .right{
     width: 50%;
+}
+.show .right{
+    margin-left:50px
+}
+.show .main_show_card h1{
+    font-weight: 600
+}
+.show .main_show_card h4{
+    font-weight: 400;
+    color:#818181;
 }
 .show_image_large{
     width:550px;
@@ -41,4 +53,29 @@
     overflow: hidden;
     margin:0 5px;
     cursor:pointer
+}
+.show table{
+    text-align: left;
+    color:#333333;
+    font-size:13px;
+    margin: 50px 0
+
+}
+.show table th{
+    font-weight: 400;
+    padding:15px 100px 15px 0
+}
+.show table td{
+    font-weight: 700
+}
+.show .show_other_cards{
+    width:100%
+}
+.show .show_other_cards>div{
+    width:70%;
+    padding:50px 0 120px;
+    margin:0px auto;
+    display:flex;
+    justify-content: space-around;
+
 }
