@@ -1,0 +1,44 @@
+.show {
+    width: 1170px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+.show>h1{
+    font-size: 2em !important;
+    font-weight: 600;
+}
+.main_show_card {
+    width: 100%;
+}
+.show .left{
+    width: 50%;
+}
+.show_image_large{
+    width:550px;
+    height:309px;
+    overflow: hidden;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:10px
+}
+.show_image{
+    width:100%;
+}
+.show_image_thumnail{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.show_image_thumnail img {
+    height: 100%;
+}
+
+.show_image_thumnail>div {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    margin:0 5px;
+    cursor:pointer
+}

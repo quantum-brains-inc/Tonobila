@@ -37,7 +37,6 @@
     width: 70px;
     height: 70px;
     padding: 20px;
-    background: #ffc000;
     border: 0;
     outline: none;
     border-radius: 50%;
@@ -46,6 +45,10 @@
     font-size: 12pt;
     box-shadow: 0 0 15px #ffc000
 } 
+
+.header .header-card button:hover{
+    box-shadow: 0 0 0px #ffae00;
+}
 
 .header .header-card .line{
     width: 50px;
