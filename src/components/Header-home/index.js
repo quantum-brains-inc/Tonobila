@@ -14,7 +14,7 @@ const Header = () => {
                     </div>
                     <Link to="/add"><button id="addPost_home_plus"></button></Link>
                 </div>
-                <div className='respo-Annonce'>DÉPOSEZ VOTRE ANNONCE</div>
+               <div className='respo-Annonce'> <Link to="/add">DÉPOSEZ VOTRE ANNONCE</Link></div>
             </div>
         </div>
         

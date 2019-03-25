@@ -70,7 +70,9 @@
     cursor: pointer;
     transition: box-shadow ease .3s;
     margin:50px auto;
-
+}
+.respo-Annonce a{
+    color:white
 }
 #addPost_home_plus{
     display:flex;
