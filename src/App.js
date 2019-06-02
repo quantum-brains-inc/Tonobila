@@ -17,8 +17,18 @@ import Guidachat from './components/Guidachat'
 import Condition from './components/Condition'
 import Blog from './components/Blog'
 import Profile from './components/Profile'
+import {auth} from './Firebase'
+import {connect} from 'react-redux'
 
 class App extends Component {
+
+    componentDidMount() {
+        auth.onAuthStateChanged((isLoggedIn) => {
+            if (isLoggedIn) {
+                this.props.dispatch({ type: "LOGIN"});
+            }
+        });
+    }
  render() {
         return (
             <Router>
@@ -53,5 +63,8 @@ class App extends Component {
         )
     }
 }
+const mapStateToProps = state => ({
+    isLoggedIn: state.isLoggedIn
+})
 
-export default App;
+export default connect(mapStateToProps)(App);
