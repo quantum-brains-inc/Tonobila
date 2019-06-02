@@ -3,21 +3,23 @@ import './profile.css';
 import pdp from '../../images/pdp.jpg'
 import img from '../../images/img.svg'
 import Cards from '../Cards'
+import firebase from '../../Firebase'
 
 class Profile extends Component {
   render() {
+    let user = firebase.auth().currentUser;
     return (
       <div className="App_profile">
           <div className="profile-container">
             <div className="left-side">
               <div className="container1">
                 <div className="pdp1">
-                  <img src={pdp} alt='pdp'/>
+                  <img src={user.photoURL} alt='pdp'/>
                   <div className="change-pic">
                     <img src={img} alt="img"/>
                   </div>
                 </div>
-                <h1 className='profile-user-name'>Brahim Baif</h1>
+                <h1 className='profile-user-name'>{user.displayName}</h1>
                 <p className="profile-city">Agadir</p>
                 <div className="create-post-btn">
                   <button className="create-post">Create Post</button>

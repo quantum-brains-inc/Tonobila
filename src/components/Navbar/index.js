@@ -10,12 +10,8 @@ class Navbar extends Component{
     burgclicked:false
   }
 
-  
   render(){
     let user = firebase.auth().currentUser;
-
-
-
 
     let barONE=[];
     let barTWO=[];
@@ -60,7 +56,10 @@ class Navbar extends Component{
                 <li className='sign-in' id="bebe"><NavLink to="/signin"><button onClick={clickLinksHandler}>Sign In</button></NavLink></li>
                 <li className='sign-up'><NavLink to="/signup"><button onClick={clickLinksHandler} >Sign Up</button></NavLink></li>
               </React.Fragment>
-                : <li>{user.displayName}</li>}
+                : <React.Fragment>
+                  <li><NavLink to="/profile">{user.displayName}</NavLink></li>
+                  <li><NavLink to="/profile"><img className="user_img" src={user.photoURL}></img></NavLink></li>
+                </React.Fragment>}
           </ul>
         </div>
         {burger}
