@@ -10,6 +10,7 @@ const initialState = {
     isLoggedIn: false
 }
 const reducer = (state = initialState, action) => {
+
     switch (action.type) {
         case "LOGIN":
             return {
@@ -22,6 +23,7 @@ const reducer = (state = initialState, action) => {
         default:
             return state;
     }
+    
 }
 const store = createStore(reducer);
 
