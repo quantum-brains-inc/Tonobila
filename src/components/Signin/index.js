@@ -8,7 +8,7 @@ class Signin extends Component {
     state = {}
     
     login = () => {
-        auth.signInWithPopup(provider) 
+        auth.signInWithRedirect(provider) 
         .then((result) => {
             //const user = result.user;
                 this.props.dispatch({ type: "LOGIN"});
@@ -16,13 +16,13 @@ class Signin extends Component {
     }
 
     loginFacebook = () => {
-        auth.signInWithPopup(faceProvider) 
+        auth.signInWithRedirect(faceProvider) 
         .then((result) => {
             //const user = result.user;
                 this.props.dispatch({ type: "LOGIN"});
         });
     }
-    
+
      logout =() => {
          auth.signOut()
              .then(() => {
@@ -73,16 +73,16 @@ class Signin extends Component {
                         <div>
                             <a href="">Forget Password?</a>
                             <button>Sign in</button>
-                        </div>
-                        
+                        </div>     
                     </form>
                 </div>
-
             </div>
         );
     }
 }
+
 const mapStateToProps = state => ({
     isLoggedIn: state.isLoggedIn
 })
+
 export default connect(mapStateToProps)(Signin);

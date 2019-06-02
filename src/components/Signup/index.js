@@ -5,7 +5,6 @@ class Signup extends Component {
     render() {
         return (
             <div className="SignupMain" id="SignupMain">
-            
                 <div className="SignupCard">
                     <h1>Sign Up</h1>
                     <div  class="google-button card">
@@ -45,7 +44,6 @@ class Signup extends Component {
                             <a href="">Have an Account?</a>
                             <button>Sign Up</button>
                         </div>
-                        
                     </form>
                 </div>
 
