@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import firebase, { auth, provider , faceProvider } from '../../Firebase.js';
 import { connect} from "react-redux";
 import './signin.css'
-import { red } from 'ansi-colors';
 
 class Signin extends Component {
     

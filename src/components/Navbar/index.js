@@ -2,13 +2,20 @@ import React, {Component} from 'react';
 import './navbar.css'
 import logo from '../../images/logo.svg';
 import {NavLink, Link} from "react-router-dom";
-
+import { connect } from "react-redux";
+import firebase from '../../Firebase'
 
 class Navbar extends Component{
   state={
     burgclicked:false
-  } 
+  }
+
+  
   render(){
+    let user = firebase.auth().currentUser;
+
+
+
 
     let barONE=[];
     let barTWO=[];
@@ -48,8 +55,12 @@ class Navbar extends Component{
             <li><NavLink to="/annonces" onClick={clickLinksHandler} >Annonces</NavLink></li>
             <li><NavLink to="/blog" onClick={clickLinksHandler} >Blog</NavLink></li>
             <li><NavLink to="/" onClick={clickLinksHandler} >Contactez nous</NavLink></li>
-            <li className='sign-in' id="bebe"><NavLink to="/signin"><button onClick={clickLinksHandler} >Sign In</button></NavLink></li>
-            <li className='sign-up'><NavLink to="/signup"><button onClick={clickLinksHandler} >Sign Up</button></NavLink></li>
+              {this.props.isLoggedIn == false ?
+            <React.Fragment>
+                <li className='sign-in' id="bebe"><NavLink to="/signin"><button onClick={clickLinksHandler}>Sign In</button></NavLink></li>
+                <li className='sign-up'><NavLink to="/signup"><button onClick={clickLinksHandler} >Sign Up</button></NavLink></li>
+              </React.Fragment>
+                : <li>{user.displayName}</li>}
           </ul>
         </div>
         {burger}
@@ -59,4 +70,8 @@ class Navbar extends Component{
   }
 }
 
-export default Navbar
+const mapStateToProps = state => ({
+  isLoggedIn: state.isLoggedIn
+})
+
+export default connect(mapStateToProps)(Navbar)
