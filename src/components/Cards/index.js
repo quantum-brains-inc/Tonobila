@@ -4,16 +4,16 @@ import './Cards.css';
 import Icon from '../../images/photo.png'
 import {Link} from 'react-router-dom'
 
- const Cards = () =>{
+const Cards = (props) =>{
   return (
       <div className="card" >
-      <Link to="/show">
-          <div className="card-img"><img src={Car}/><img src={Icon} className='pics-icon'/></div>
+      <Link to={`/show/${props.keys}`}>
+          <div className="card-img"><img src={props.thumnail}/><img src={Icon} className='pics-icon'/></div>
               <div className="card-line"></div>
-              <h2 className="card-title">Model X | Tesla</h2>
+              <h2 className="card-title">{props.name}</h2>
               <div className="card-bottom">
-                  <p className="card-city"> Agadir</p>
-                  <p className="card-date"> Yesterday</p>
+                  <p className="card-city">{props.city}</p>
+                  <p className="card-date">{props.date}</p>
               </div>
         </Link>
       </div>

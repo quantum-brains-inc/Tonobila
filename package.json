@@ -5,8 +5,10 @@
   "dependencies": {
     "firebase": "^6.1.0",
     "react": "^16.8.3",
+    "react-albus": "^2.0.0",
     "react-cookie-consent": "^2.2.2",
     "react-dom": "^16.8.3",
+    "react-firebase-file-uploader": "^2.4.2",
     "react-redux": "^7.0.3",
     "react-router-dom": "^5.0.0",
     "react-router-scroll-top": "^0.1.1",

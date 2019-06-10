@@ -71,6 +71,7 @@ nav a {
     border-radius: 50%;
     margin-bottom: -10px;
 }
+
 @media (min-width: 992px) and (max-width: 1199px) { 
     nav{
         max-width: 970px;  

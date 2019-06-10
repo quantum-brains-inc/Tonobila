@@ -5,6 +5,8 @@
     color: #818181;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 }
 .add-post h1{
     font-weight:600;
@@ -54,6 +56,9 @@
 .add-post>div:nth-child(3) .post_button_div button{
     padding-left:40px;
     padding-right:40px; 
+}
+label {
+    margin: .7rem;
 }
 @media (min-width: 992px) and (max-width: 1199px) { 
     .add-post{

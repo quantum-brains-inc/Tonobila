@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './profile.css';
-import pdp from '../../images/pdp.jpg'
 import img from '../../images/img.svg'
 import Cards from '../Cards'
 import firebase from '../../Firebase'

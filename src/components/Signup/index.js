@@ -12,18 +12,23 @@ class Signup extends Component {
         error: null,
     };
 
+
     handleInputChange = (event) => {
         this.setState({ [event.target.name]: event.target.value });
         };
+
     handleSubmit = (event) => {
         event.preventDefault();
         const { email, password } = this.state;
         firebase
             .auth()
             .createUserWithEmailAndPassword(email, password)
-            .then((user) => {
-            this.props.history.push('/');
-            })
+            .then(
+                () => {
+                    var user = firebase.auth().currentUser;
+                    user.sendEmailVerification();
+                }
+            )
             .catch((error) => {
             this.setState({ error: error });
             });
@@ -33,7 +38,7 @@ class Signup extends Component {
 
     login = () => {
         auth.signInWithRedirect(provider)
-            .then((result) => {
+            .then((result) => {               
                 this.props.dispatch({ type: "LOGIN" });
             });
     }
@@ -95,7 +100,6 @@ class Signup extends Component {
                         </div>
                     </form>
                 </div>
-
             </div>
         );
     }

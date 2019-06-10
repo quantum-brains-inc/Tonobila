@@ -30,12 +30,13 @@ class Signin extends Component {
                 this.setState({ error: error });
             });
     };
+ 
 
     login = () => {
         auth.signInWithRedirect(provider) 
         .then((result) => {
             //const user = result.user;
-            this.props.dispatch({ type: "LOGIN"});
+            this.props.dispatch({ type: "LOGIN"})
             this.props.history.push('/');
         });
     }
@@ -44,7 +45,7 @@ class Signin extends Component {
         auth.signInWithRedirect(faceProvider) 
         .then((result) => {
             //const user = result.user;
-            this.props.dispatch({ type: "LOGIN"});
+            this.props.dispatch({ type: "LOGIN"})
             this.props.history.push('/');
         });
     }
