@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import './home.css';
 import Header from '../Header-home'
-import Navbar from '../Navbar'
 import Latest from '../Latest'
 import AdBanner from '../AdBanner'
-import Footer from '../Footer'
 import Actuality from '../actuality'
+import { connect } from "react-redux";
+
+
 class App extends Component {
   render() {
     return (
@@ -21,4 +22,8 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  isLoggedIn: state.isLoggedIn
+})
+
+export default connect(mapStateToProps)(App);

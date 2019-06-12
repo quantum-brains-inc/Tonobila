@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import './signup.css';
 import { connect} from "react-redux";
 import firebase, { auth, provider , faceProvider } from '../../Firebase';
-
+import profilePicture from '../../images/profile.jpg' 
 
 class Signup extends Component {
 
     state = {
         email: '',
         password: '',
+        displayName:'',
         error: null,
     };
-
 
     handleInputChange = (event) => {
         this.setState({ [event.target.name]: event.target.value });
@@ -19,7 +19,7 @@ class Signup extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        const { email, password } = this.state;
+        const { email, password, displayName } = this.state;
         firebase
             .auth()
             .createUserWithEmailAndPassword(email, password)
@@ -27,35 +27,44 @@ class Signup extends Component {
                 () => {
                     var user = firebase.auth().currentUser;
                     user.sendEmailVerification();
+                    user.updateProfile({ 
+                        displayName: displayName,
+                        photoURL: profilePicture
+                    }).then(function () {
+                        var displayName = user.displayName;
+                        var photoURL = user.photoURL;
+
+                    }, function (error) {
+
+                    });     
+                    this.props.history.push('/');
                 }
             )
-            .catch((error) => {
-            this.setState({ error: error });
-            });
         };
-
-
 
     login = () => {
         auth.signInWithRedirect(provider)
             .then((result) => {               
                 this.props.dispatch({ type: "LOGIN" });
+                this.props.history.push('/');
             });
     }
     loginFacebook = () => {
         auth.signInWithRedirect(faceProvider)
             .then((result) => {
                 this.props.dispatch({ type: "LOGIN" });
+                this.props.history.push('/');
             });
     }
     logout = () => {
         auth.signOut()
             .then(() => {
                 this.props.dispatch({ type: "LOGOUT" })
+                this.props.history.push('/');
             });
     }
     render() {
-        const { email, password, error } = this.state;
+        const { email, password, error, displayName } = this.state;
         return (
             <div className="SignupMain" id="SignupMain">
                 <div className="SignupCard">
@@ -84,16 +93,16 @@ class Signup extends Component {
                 <div className="Signup_form card" onSubmit={this.handleSubmit}>
                     <form >
                         <label>Full Name</label>
-                        <input type="text"/>
+                        <input type="text" value={displayName} onChange={this.handleInputChange} name="displayName"/>
 
                         <label>E-mail</label>
                         <input type="email" value={email} onChange={this.handleInputChange} name="email" />
 
                         <label>Password</label>
-                        <input type="text" value={password} onChange={this.handleInputChange} name="password" />
+                        <input type="password" value={password} onChange={this.handleInputChange} name="password" />
 
                         <label>Confirm Password</label>
-                        <input type="text"/>
+                        <input type="password"/>
                         <div>
                             <a href="">Have an Account?</a>
                             <button>Sign Up</button>
