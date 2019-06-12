@@ -1,8 +1,17 @@
-import React from 'react'
+import React, {Component }from 'react'
 import './header-home.css'
-import {Link} from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
+import { connect } from "react-redux";
+import firebase  from '../../Firebase'
 
-const Header = () => {
+
+class Header extends Component{
+
+constructor(props) {
+    super();
+}
+
+render() {
     return(
         <div className="header-container">
             <div className="header">
@@ -12,12 +21,23 @@ const Header = () => {
                         <div className="line"></div>
                         <p>Dépot d’annonces gratuit pour vendre tout type de voiture au maroc.</p>
                     </div>
-                    <Link to="/add"><button id="addPost_home_plus"></button></Link>
+                    {this.props.isLoggedIn ?
+                    <React.Fragment>
+                        <Link to="/add"><button id="addPost_home_plus"></button></Link>
+                    </React.Fragment>
+                    :
+                    <Link to="/signup"><button id="addPost_home_plus"></button></Link>
+                    } 
                 </div>
                <div className='respo-Annonce'> <Link to="/add">DÉPOSEZ VOTRE ANNONCE</Link></div>
             </div>
-        </div>
-        
+        </div>    
     )
+ }
 }
-export default Header
+
+const mapStateToProps = state => ({
+    isLoggedIn: state.isLoggedIn
+})
+
+export default withRouter(connect(mapStateToProps)(Header));

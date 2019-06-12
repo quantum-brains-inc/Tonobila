@@ -72,6 +72,23 @@ nav a {
     margin-bottom: -10px;
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top:2.4rem;
+  background-color: #ffffff;
+  min-width: 90px;
+  padding: 12px 7px;
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 @media (min-width: 992px) and (max-width: 1199px) { 
     nav{
         max-width: 970px;  

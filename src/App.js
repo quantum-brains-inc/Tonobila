@@ -17,6 +17,8 @@ import Guidachat from './components/Guidachat'
 import Condition from './components/Condition'
 import Blog from './components/Blog'
 import Profile from './components/Profile'
+import Reset from './components/resetPassword'
+import Setting from './components/Setting'
 import {auth} from './Firebase'
 import {connect} from 'react-redux'
 
@@ -29,6 +31,7 @@ class App extends Component {
             }
         });
     }
+    
  render() {
      console.log(this.props);
         return (
@@ -39,15 +42,23 @@ class App extends Component {
                         <Route exact path="/" component={Home}/>
                         <Route exact path="/annonces" component={Annonces}/>
                         <Route exact path="/article" component={Articles}/>
+                        <Route exact path="/resetpassword" component={Reset} />
+                        <Route exact path="/setting" component={Setting} />
                         <Route exact path="/error" component={Error}/>
-                        <Route exact path="/signup" component={Signup}/>
-                        <Route exact path="/signin" component={Signin}/>
-                        <Route exact path="/add" component={AddPost}/>
-                        <Route exact path="/show/:id" component={Show}/>
-                        <Route exact path="/guidachat" component={Guidachat}/>
-                        <Route exact path="/condition" component={Condition}/>
-                        <Route exact path="/blog" component={Blog}/>
-                        <Route exact path="/profile" component={Profile}/>
+                        <Route exact path="/add" component={AddPost} />
+                        <Route exact path="/show/:id" component={Show} />
+                        <Route exact path="/guidachat" component={Guidachat} />
+                        <Route exact path="/condition" component={Condition} />
+                        <Route exact path="/blog" component={Blog} />
+                        <Route exact path="/profile" component={Profile} />
+                        {this.props.isLoggedIn ?
+                        <Redirect to="/" />
+                        :
+                            <React.Fragment>
+                            <Route exact path="/signup" component={Signup}/>
+                            <Route exact path="/signin" component={Signin}/>
+                        </React.Fragment>
+                        }
                         <Route path="*" render={() => <Redirect to="/Error" />} />
                     </Switch>
                     <Footer/>

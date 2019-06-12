@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase, { auth, provider , faceProvider } from '../../Firebase.js';
+import { withRouter, NavLink } from "react-router-dom";
 import { connect} from "react-redux";
 import './signin.css'
 
@@ -10,7 +11,6 @@ class Signin extends Component {
         password: '',
         error: null,
     };
-
 
     handleInputChange = (event) => {
         this.setState({ [event.target.name]: event.target.value });
@@ -24,29 +24,24 @@ class Signin extends Component {
             .signInWithEmailAndPassword(email, password)
             .then((user) => {
                 this.props.history.push('/');
-                this.props.dispatch({ type: "LOGIN" });
+                this.props.dispatch({ type: "LOGIN" })
             })
-            .catch((error) => {
-                this.setState({ error: error });
-            });
     };
  
-
     login = () => {
         auth.signInWithRedirect(provider) 
-        .then((result) => {
-            //const user = result.user;
-            this.props.dispatch({ type: "LOGIN"})
-            this.props.history.push('/');
+            .then(() => {
+                this.props.history.push('/')
+                this.props.dispatch({ type: "LOGIN" })
+                
         });
     }
 
     loginFacebook = () => {
         auth.signInWithRedirect(faceProvider) 
         .then((result) => {
-            //const user = result.user;
             this.props.dispatch({ type: "LOGIN"})
-            this.props.history.push('/');
+            this.props.history.push('/')
         });
     }
 
@@ -54,7 +49,7 @@ class Signin extends Component {
          auth.signOut()
              .then(() => {
                 this.props.dispatch({ type: "LOGOUT" })
-                 this.props.history.push('/');
+                this.props.history.push('/')
          });
      }
 
@@ -99,9 +94,9 @@ class Signin extends Component {
                         <input type="text" value={email} onChange={this.handleInputChange} name={"email"} />
 
                         <label>Password</label>
-                        <input type="text" value={password} onChange={this.handleInputChange} name={"password"} />
+                        <input type="password" value={password} onChange={this.handleInputChange} name={"password"} />
                         <div>
-                            <a href="">Forget Password?</a>
+                            <a><NavLink to="/resetpassword">Forget Password?</NavLink></a>
                             <button>Sign in</button>
                         </div>     
                     </form>
@@ -115,4 +110,4 @@ const mapStateToProps = state => ({
     isLoggedIn: state.isLoggedIn
 })
 
-export default connect(mapStateToProps)(Signin);
+export default withRouter(connect(mapStateToProps)(Signin));

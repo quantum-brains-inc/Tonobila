@@ -1,18 +1,25 @@
 import React, {Component} from 'react';
 import './navbar.css'
 import logo from '../../images/logo.svg';
-import {NavLink, Link} from "react-router-dom";
+import { NavLink, Link, withRouter} from "react-router-dom";
 import { connect } from "react-redux";
-import firebase from '../../Firebase'
+import firebase, { auth } from '../../Firebase'
 
 class Navbar extends Component{
   state={
     burgclicked:false
   }
 
+  logout = () => {
+    auth.signOut()
+      .then(() => {
+        this.props.dispatch({ type: "LOGOUT" })
+        this.props.history.push('/')
+      });
+  }
+
   render(){
     let user = firebase.auth().currentUser;
-
     let barONE=[];
     let barTWO=[];
     let barTHREE=[];
@@ -57,8 +64,15 @@ class Navbar extends Component{
                 <li className='sign-up'><NavLink to="/signup"><button onClick={clickLinksHandler} >Sign Up</button></NavLink></li>
               </React.Fragment>
                 : <React.Fragment>
-                  <li><NavLink to="/profile">{user.displayName}</NavLink></li>
-                  <li><NavLink to="/profile"><img className="user_img" src={user.photoURL}></img></NavLink></li>
+                  <li>{user.displayName}</li>
+                  <div class="dropdown">
+                  <li><img className="user_img" src={user.photoURL}></img></li>
+                    <div class="dropdown-content">
+                      <li><NavLink to="/profile">Profile</NavLink></li>
+                      <li><NavLink to="/setting">Setting</NavLink></li>
+                      <li><a onClick={this.logout}>Logout</a></li>
+                    </div>
+                  </div>
                 </React.Fragment>}
           </ul>
         </div>
@@ -73,4 +87,4 @@ const mapStateToProps = state => ({
   isLoggedIn: state.isLoggedIn
 })
 
-export default connect(mapStateToProps)(Navbar)
+export default withRouter(connect(mapStateToProps)(Navbar))
