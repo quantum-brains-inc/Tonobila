@@ -7,6 +7,7 @@ import firebase from '../../Firebase'
 class Profile extends Component {
   render() {
     let user = firebase.auth().currentUser;
+    console.log(user)
     return (
       <div className="App_profile">
           <div className="profile-container">

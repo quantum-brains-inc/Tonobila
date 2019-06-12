@@ -15,6 +15,7 @@ export default class Master extends Component {
             description: '',
             carrosserie:'',
             adresse:'',
+            telephone:'',
             author: '',
             uid: '',
             marque: '',
@@ -32,6 +33,7 @@ export default class Master extends Component {
             filenames: [],
             downloadURLs: [],
             isUploading: false,
+            errorText:'',
             progress: 0,
         }
         this.handleChange = this.handleChange.bind(this)
@@ -40,11 +42,35 @@ export default class Master extends Component {
     }
 
     _next() {
-        let currentStep = this.state.currentStep
-        currentStep = currentStep >= 2 ? 3 : currentStep + 1
-        this.setState({
-            currentStep: currentStep
-        })
+        let currentStep = this.state.currentStep ;
+        const step1Names = ['marque','modele','adresse','telephone','ville','annee','prix_max'];
+        const step2Names = ['main','carburant','couleur_ex','couleur_in','carrosserie','kilometrage','num_port','puissance_fiscale']
+        let namesArray;
+        switch(currentStep) {
+            case 1:
+                namesArray = step1Names;
+              break;
+            case 2:
+                namesArray = step2Names;
+              break;
+        }
+        let count = 0;
+        for(let i = 0 ; i < namesArray.length ; i++ ){
+            if( this.state[namesArray[i]] == '' ||  this.state[namesArray[i]] == undefined){
+                count++
+            }
+        }
+        if(count === 0){
+            currentStep = currentStep >= 2 ? 3 : currentStep + 1
+            this.setState({
+                currentStep: currentStep,
+                errorText: ''
+            })
+        }else{
+            this.setState({errorText:"Inputs mustn't be empty"})
+        }
+        
+        
     }
 
     _prev() {
@@ -54,7 +80,6 @@ export default class Master extends Component {
             currentStep: currentStep
         })
     }
-
     handleChange(event) {
         const { name, value } = event.target
         this.setState({
@@ -74,50 +99,60 @@ export default class Master extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        const { title, description, author, adresse, main, carrosserie, uid, marque, downloadURLs, prix, modele, carburant, annee, couleur_ex, couleur_in, type_cha, kilometrage, num_port, puissance_fiscale } = this.state;
-        this.ref.add({
-            title,
-            description,
-            marque,
-            main,
-            downloadURLs,
-            author,
-            adresse,
-            carrosserie,
-            puissance_fiscale,
-            uid,
-            prix,
-            modele,
-            carburant,
-            annee,
-            couleur_ex,
-            couleur_in,
-            type_cha,
-            kilometrage,
-            num_port
-        }).then((docRef) => {
-            this.setState({
-                title: '',
-                adresse:'',
-                author: '',
-                main:'',
-                uid: '',
-                description: '',
-                puissance_fiscale:'',
-                marque: '',
+        
+        const { title, description, author,telephone, adresse, main, carrosserie, uid, marque, downloadURLs, prix, modele, carburant, annee, couleur_ex, couleur_in, type_cha, kilometrage, num_port, puissance_fiscale } = this.state;
+
+        if(downloadURLs.length !== 0 && description == ''){
+            
+            this.ref.add({
+                title,
+                description,
+                marque,
+                main,
+                downloadURLs,
+                author,
+                telephone,
+                adresse,
                 carrosserie,
-                prix: '',
-                modele: '',
-                carburant: '',
-                annee: '',
-                couleur_ex: '',
-                couleur_in: '',
-                type_cha: '',
-                kilometrage: '',
-                num_port: '',
-                downloadURLs: []
-            });
-        })
+                puissance_fiscale,
+                uid,
+                prix,
+                modele,
+                carburant,
+                annee,
+                couleur_ex,
+                couleur_in,
+                type_cha,
+                kilometrage,
+                num_port
+            }).then((docRef) => {
+                this.setState({
+                    title: '',
+                    adresse:'',
+                    author: '',
+                    main:'',
+                    telephone:'',
+                    uid: '',
+                    description: '',
+                    puissance_fiscale:'',
+                    marque: '',
+                    carrosserie,
+                    prix: '',
+                    modele: '',
+                    carburant: '',
+                    annee: '',
+                    couleur_ex: '',
+                    couleur_in: '',
+                    type_cha: '',
+                    kilometrage: '',
+                    num_port: '',
+                    errorText:'',
+                    downloadURLs: []
+                });
+            })
+        }else{
+            this.setState({errorText:"Please, upload your car's images and fill the description"})
+        }
     }
     handleChangeUsername = event =>
         this.setState({ username: event.target.value });
@@ -197,6 +232,7 @@ export default class Master extends Component {
                         handleChange={this.handleChange}
                         description={this.state.description}
                     />
+                    <p>{this.state.errorText}</p>
                     {this.previousButton}
                     {this.nextButton}
                     {this.state.currentStep == 3 ?

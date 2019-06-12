@@ -6,7 +6,6 @@ export default class Step2 extends Component {
         if (this.props.currentStep !== 2) {
             return null
         }
-
         return (
             <div>
                 <h3>Détails Technique</h3>
@@ -17,6 +16,7 @@ export default class Step2 extends Component {
                         value={this.props.main}
                         onChange={this.props.handleChange}
                         name="main">
+                        <option value="" >Choisir Une Option...</option>
                         <option>Oui</option>
                         <option>Non</option>
                     </select>
@@ -28,6 +28,7 @@ export default class Step2 extends Component {
                         value={this.props.carburant}
                         onChange={this.props.handleChange}
                         name="carburant">
+                        <option value="" >Choisir Une Option...</option>
                         <option>Essence</option>
                         <option>Diesel</option>
                         <option>Gasoil</option>
@@ -40,7 +41,9 @@ export default class Step2 extends Component {
                         value={this.props.couleur_ex}
                         onChange={this.props.handleChange}
                         name="couleur_ex">
+                        <option value="" >Choisir Une Option...</option>
                         <option>black</option>
+                        <option>wa zreg</option>
                     </select>
                 </div>
                 <div>
@@ -50,7 +53,9 @@ export default class Step2 extends Component {
                         value={this.props.couleur_in}
                         onChange={this.props.handleChange}
                         name="couleur_in">
+                        <option value="" >Choisir Une Option...</option>
                         <option>red</option>
+                        <option>pink</option>
                     </select>
                 </div>
                 <div>
@@ -60,6 +65,7 @@ export default class Step2 extends Component {
                         value={this.props.carrosserie}
                         onChange={this.props.handleChange}
                         name="carrosserie">
+                        <option value="" >Choisir Une Option...</option>
                         <option>Berline</option>
                         <option>Coupé</option>
                         <option>Familiale</option>
@@ -87,6 +93,7 @@ export default class Step2 extends Component {
                         value={this.props.num_port}
                         onChange={this.props.handleChange}
                         name="num_port">
+                        <option value="" >Choisir Une Option...</option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>

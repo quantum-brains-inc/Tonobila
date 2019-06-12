@@ -2,12 +2,11 @@ import React, { Component } from 'react'
 
 
 export default class Step1 extends Component {
-
+    
     render() {
         if (this.props.currentStep !== 1) { 
             return null
         }
-        
         return (
             <div>
                 <h3>Détails de Véhicule</h3>
@@ -18,7 +17,7 @@ export default class Step1 extends Component {
                         value={this.props.marque} 
                         onChange={this.props.handleChange} 
                         name="marque">
-                        <option selected>Choisir Une Option...</option>
+                        <option value="" >Choisir Une Option...</option>
                         <option>Tesla</option>
                         <option>BMW</option>
                         <option>Ford</option>
@@ -31,7 +30,7 @@ export default class Step1 extends Component {
                         value={this.props.modele}
                         onChange={this.props.handleChange}
                         name="modele">
-                        <option selected>Choisir Une Option...</option>
+                        <option value="" >Choisir Une Option...</option>
                         <option>Model x</option>
                         <option>Model Y</option>
                         <option>Model 3</option>
@@ -53,7 +52,7 @@ export default class Step1 extends Component {
                         value={this.props.ville}
                         onChange={this.props.handleChange}
                         name="ville">
-                        <option selected>Choisir Une Option...</option>
+                        <option value="" >Choisir Une Option...</option>
                         <option>Agadir</option>
                         <option>Casablanca</option>
                         <option>Rabat</option>
@@ -68,6 +67,18 @@ export default class Step1 extends Component {
                         onChange={this.props.handleChange}
                         name="annee"
                         type="date"
+                        >
+                    </input>
+                </div>
+                <div>
+                    <label htmlFor="telephone">telephone*</label>
+                    <input
+                        id="telephone"
+                        value={this.props.telephone}
+                        onChange={this.props.handleChange}
+                        name="telephone"
+                        type="tel"
+                        min="0"
                         >
                     </input>
                 </div>
