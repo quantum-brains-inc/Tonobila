@@ -22,7 +22,9 @@ export default class Step1 extends Component {
             headers : { 
               'Content-Type': 'application/json',
               'Accept': 'application/json'
-             }
+             },
+            method: 'GET',
+            credentials: 'include',
             })
         .then(response => response.json() )
         .then(data => carsModules = data.map(car => car))
