@@ -1,0 +1,68 @@
+body{
+    overflow-x: hidden;
+}
+.contact-us-wrapper{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.contact-us{
+    width: 50%;
+    min-width: 400px;
+    position: relative;
+    background: #ffffff;
+    box-shadow: 1px 1px rgba(116, 116, 116, 0.1);
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 20px;
+
+}
+.contact-us form{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+.contact-us input{
+    margin: 20px 0 0 0;
+    border: 0;
+    height: 40px;
+    width: 80%;
+    color: #818181;
+    padding: 5px 10px;
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+.contact-us input[type='text']{
+    background: #faf9f6 url('../../images/user.svg') no-repeat;
+    background-position: 10px 10px;
+    background-size: 20px;
+}
+.contact-us input[type='email']{
+    background: #faf9f6 url('../../images/mail.svg') no-repeat;
+    background-position: 10px 10px;
+    background-size: 20px;
+}
+.contact-us textarea{
+    margin: 20px 0 0 0;
+    background: #faf9f6;
+    color: #818181;
+    border: 0;
+    width: 80%;
+    padding: 5px 10px;
+    resize: none;
+    box-sizing: border-box;
+}
+.contact-us h2{
+    margin: 0;
+}
+.contact-us button{
+    margin: 20px;
+    width: 100px;
+}
