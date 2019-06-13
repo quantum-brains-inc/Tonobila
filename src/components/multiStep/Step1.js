@@ -74,26 +74,26 @@ export default class Step1 extends Component {
                         onChange={this.props.handleChange}
                         name="ville">
                         <option value="" >Choisir Une Option...</option>
-                        <option>Casablanca</option>
-                        <option>Fès</option>
-                        <option>Salé</option>
-                        <option>Tanger</option>
-                        <option>Marrakech</option>
-                        <option>Meknès</option>
-                        <option>Rabat</option>
-                        <option>Oujda</option>
-                        <option>Kénitra</option>
-                        <option>Agadir</option>
-                        <option>Tétouan</option>
-                        <option>Témara</option>
-                        <option>Safi</option>
-                        <option>Mohammédia</option>
-                        <option>Khouribga</option>
-                        <option>El Jadida</option>
-                        <option>Béni Mellal</option>
-                        <option>Taza</option>
-                        <option>Khémisset</option>
-                        <option>Taourirt</option>
+                        <option value="Casablanca">Casablanca</option>
+                        <option value="Fès">Fès</option>
+                        <option value="Salé">Salé</option>
+                        <option value="Tanger">Tanger</option>
+                        <option value="Marrakech">Marrakech</option>
+                        <option value="Meknès">Meknès</option>
+                        <option value="Rabat">Rabat</option>
+                        <option value="Oujda">Oujda</option>
+                        <option value="Kénitra">Kénitra</option>
+                        <option value="Agadir">Agadir</option>
+                        <option value="Tétouan">Tétouan</option>
+                        <option value="Témara">Témara</option>
+                        <option value="Safi">Safi</option>
+                        <option value="Mohammédia">Mohammédia</option>
+                        <option value="Khouribga">Khouribga</option>
+                        <option value="El Jadida">El Jadida</option>
+                        <option value="Béni Mellal">Béni Mellal</option>
+                        <option value="Taza">Taza</option>
+                        <option value="Khémisset">Khémisset</option>
+                        <option value="Taourirt">Taourirt</option>
                     </select>
                 </div>
                 <div>
