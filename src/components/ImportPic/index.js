@@ -11,7 +11,6 @@ class ImportPic extends Component{
         isUploading: false,
         progress: 0,
     };
-
         handleChangeUsername = event =>
             this.setState({ username: event.target.value });
         handleUploadStart = () => this.setState({ isUploading: true, progress: 0 });

@@ -19,6 +19,7 @@ import Blog from './components/Blog'
 import Profile from './components/Profile'
 import Reset from './components/resetPassword'
 import Setting from './components/Setting'
+import contactUs from './components/contactUs'
 import {auth} from './Firebase'
 import {connect} from 'react-redux'
 
@@ -51,6 +52,7 @@ class App extends Component {
                         <Route exact path="/condition" component={Condition} />
                         <Route exact path="/blog" component={Blog} />
                         <Route exact path="/profile" component={Profile} />
+                        <Route exact path="/contact-us" component={contactUs} />
                         {this.props.isLoggedIn ?
                         <Redirect to="/" />
                         :
