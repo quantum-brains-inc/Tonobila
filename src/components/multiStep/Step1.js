@@ -18,7 +18,7 @@ export default class Step1 extends Component {
     }
     optionHandlerChange(e){
         let carsModules = [];
-        fetch('/'+e.target.value , {
+        fetch('https://tonobila-api.herokuapp.com/'+e.target.value , {
             headers : { 
               'Content-Type': 'application/json',
               'Accept': 'application/json'

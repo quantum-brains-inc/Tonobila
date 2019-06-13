@@ -1,7 +1,6 @@
 {
   "name": "tonobila-final",
   "version": "0.1.0",
-  "proxy": "https://tonobila-api.herokuapp.com/",
   "private": true,
   "dependencies": {
     "firebase": "^6.1.0",

@@ -67,7 +67,7 @@ export default class Master extends Component {
                 errorText: ''
             })
         }else{
-            this.setState({errorText:"Inputs mustn't be empty"})
+            this.setState({ errorText:"veuillez choisir une valeur"})
         }
     }
 
