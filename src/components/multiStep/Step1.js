@@ -18,14 +18,7 @@ export default class Step1 extends Component {
     }
     optionHandlerChange(e){
         let carsModules = [];
-        fetch('https://tonobila-api.herokuapp.com/'+e.target.value , {
-            headers : { 
-              'Content-Type': 'application/json',
-              'Accept': 'application/json'
-             },
-            method: 'GET',
-            credentials: 'include',
-            })
+        fetch('https://tonobila-api.herokuapp.com/'+e.target.value)
         .then(response => response.json() )
         .then(data => carsModules = data.map(car => car))
         .then(()=> this.setState({carsModules}) )  
