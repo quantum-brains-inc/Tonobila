@@ -74,10 +74,26 @@ export default class Step1 extends Component {
                         onChange={this.props.handleChange}
                         name="ville">
                         <option value="" >Choisir Une Option...</option>
-                        <option>Agadir</option>
                         <option>Casablanca</option>
-                        <option>Rabat</option>
+                        <option>Fès</option>
+                        <option>Salé</option>
                         <option>Tanger</option>
+                        <option>Marrakech</option>
+                        <option>Meknès</option>
+                        <option>Rabat</option>
+                        <option>Oujda</option>
+                        <option>Kénitra</option>
+                        <option>Agadir</option>
+                        <option>Tétouan</option>
+                        <option>Témara</option>
+                        <option>Safi</option>
+                        <option>Mohammédia</option>
+                        <option>Khouribga</option>
+                        <option>El Jadida</option>
+                        <option>Béni Mellal</option>
+                        <option>Taza</option>
+                        <option>Khémisset</option>
+                        <option>Taourirt</option>
                     </select>
                 </div>
                 <div>
