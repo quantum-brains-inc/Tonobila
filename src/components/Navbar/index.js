@@ -57,7 +57,7 @@ class Navbar extends Component{
             <li><NavLink to="/" onClick={clickLinksHandler} >Accueil</NavLink></li>
             <li><NavLink to="/annonces" onClick={clickLinksHandler} >Annonces</NavLink></li>
             <li><NavLink to="/blog" onClick={clickLinksHandler} >Blog</NavLink></li>
-            <li><NavLink to="/" onClick={clickLinksHandler} >Contactez nous</NavLink></li>
+            <li><NavLink to="/contact-us" onClick={clickLinksHandler} >Contactez nous</NavLink></li>
               {this.props.isLoggedIn == false ?
             <React.Fragment>
                 <li className='sign-in' id="bebe"><NavLink to="/signin"><button onClick={clickLinksHandler}>Sign In</button></NavLink></li>
