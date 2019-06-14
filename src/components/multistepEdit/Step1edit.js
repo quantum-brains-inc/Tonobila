@@ -41,6 +41,7 @@ export default class Step1edit extends Component {
         if (this.props.currentStep !== 1) {
             return null
         }
+        
         return (
             <div>
                  <h3>Détails de Véhicule</h3>
@@ -116,13 +117,13 @@ export default class Step1edit extends Component {
                     </input>
                 </div>
                 <div>
-                    <label htmlFor="prix_max">Prix*</label>
+                    <label htmlFor="prix">Prix*</label>
                     <input
-                        id="prix_max"
-                        defaultValue={this.props.prix_max}
-                        value={this.props.prix_max}
+                        id="prix"
+                        defaultValue={this.props.prix}
+                        value={this.props.prix}
                         onChange={this.props.handleChange}
-                        name="prix_max"
+                        name="prix"
                         type="number"
                         min="0"
                         >

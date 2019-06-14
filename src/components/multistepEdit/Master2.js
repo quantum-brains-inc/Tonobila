@@ -20,7 +20,7 @@ export default class Master2 extends Component {
             telephone: '',
             author: '',
             ville:'',
-            prix_max:'',
+            prix:'',
             uid: '',
             marque: '',
             prix: '',
@@ -59,7 +59,6 @@ export default class Master2 extends Component {
                     carrosserie: posts.carrosserie,
                     adresse: posts.adresse,
                     telephone: posts.telephone,
-                    prix_max: posts.prix_max,
                     marque: posts.marque,
                     prix: posts.prix,
                     modele: posts.modele,
@@ -74,7 +73,6 @@ export default class Master2 extends Component {
                     num_port: posts.num_port,
                     
                 });
-                console.log(this.state.marque)
             } else {
                 
             }
@@ -83,7 +81,7 @@ export default class Master2 extends Component {
 
     _next() {
         let currentStep = this.state.currentStep;
-        const step1Names = ['marque', 'modele', 'adresse', 'telephone', 'ville', 'annee', 'prix_max'];
+        const step1Names = ['marque', 'modele', 'adresse', 'telephone', 'ville', 'annee', 'prix'];
         const step2Names = ['main', 'carburant', 'couleur_ex', 'couleur_in', 'carrosserie', 'kilometrage', 'num_port', 'puissance_fiscale']
         let namesArray;
         switch (currentStep) {
@@ -138,7 +136,7 @@ export default class Master2 extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
 
-        const { title, description, author, telephone, adresse,ville,prix_max, main, carrosserie, uid, marque, downloadURLs, prix, modele, carburant, annee, couleur_ex, couleur_in, type_cha, kilometrage, num_port, puissance_fiscale } = this.state;
+        const { title, description, author, telephone, adresse,ville, main, carrosserie, uid, marque, downloadURLs, prix, modele, carburant, annee, couleur_ex, couleur_in, type_cha, kilometrage, num_port, puissance_fiscale } = this.state;
         const updateRef = firebase.firestore().collection('posts').doc(this.state.key);
         if (downloadURLs.length !== 0 && description != '') {
 
@@ -150,7 +148,6 @@ export default class Master2 extends Component {
                 downloadURLs,
                 author,
                 telephone,
-                prix_max,
                 ville,
                 adresse,
                 carrosserie,
@@ -176,7 +173,6 @@ export default class Master2 extends Component {
                     uid: '',
                     description: '',
                     puissance_fiscale: '',
-                    prix_max:'',
                     marque: '',
                     carrosserie,
                     prix: '',
@@ -257,7 +253,7 @@ export default class Master2 extends Component {
                             adresse={this.state.adresse}
                             ville={this.state.ville}
                             annee={this.state.annee}
-                            prix_max={this.state.prix_max}
+                            prix={this.state.prix}
                             telephone={this.state.telephone}
                         />
                         <Step2edit

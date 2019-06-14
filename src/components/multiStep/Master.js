@@ -126,6 +126,7 @@ export default class Master extends Component {
                 kilometrage,
                 num_port
             }).then((docRef) => {
+                console.log(this.state)
                 this.setState({
                     title: '',
                     adresse:'',
@@ -214,7 +215,7 @@ export default class Master extends Component {
                         adresse={this.state.adresse}
                         ville={this.state.ville}
                         annee={this.state.annee}
-                        prix_max={this.state.prix}
+                        prix={this.state.prix}
                     />
                     <Step2
                         currentStep={this.state.currentStep}
