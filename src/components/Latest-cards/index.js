@@ -17,14 +17,16 @@ export default class LatestCards extends Component {
       onCollectionUpdate = (querySnapshot) => {
       const posts = [];
       querySnapshot.forEach((doc) => {
-        const { title, description, author, city, date, key, downloadURLs } = doc.data();
+        const { title, description, author, ville, date, key,marque,modele, downloadURLs } = doc.data();
         posts.push({
           key: doc.id,
           doc,
           title,
+          marque,
+          modele,
           description,
           author,
-          city,
+          ville,
           date,
           downloadURLs
         });
@@ -33,17 +35,34 @@ export default class LatestCards extends Component {
         posts
     });
     }
-
+    getTime(arg){
+      let months = [
+        "Jan","Fev","Mar","Avr","Mai","Jui","Jul",
+        "Aout","Sept","Oct","Nov","Dec"
+      ];
+      let days = ['Dim','Lun','Mar','Mer','jeu','Ven','Sam']
+      let date = new Date(arg*1000)
+      let day = date.getDate();
+      let daynumb = date.getDay()
+      let month = date.getMonth();
+      let year = date.getFullYear();
+      let formattedTime = days[daynumb]+' '+day+' '+ months[month] + ' '+ year;
+      return formattedTime
+    }
     componentDidMount() {
       this.unsubscribe = this.ref.onSnapshot(this.onCollectionUpdate);
     }
-
-
   render() {
     return (
       <div className="latest-cards-container">
         {this.state.posts.map(post => 
-          <Cards className="cards-item-1" name={post.title} city={post.city} date={post.date} keys={post.key} thumnail={post.downloadURLs[0]}></Cards>
+          <Cards 
+          className="cards-item-1" 
+          carName={post.marque+' '+post.modele} 
+          ville={post.ville}  
+          date={this.getTime(post.doc._document.version.timestamp.seconds)} 
+          keys={post.key} 
+          thumnail={post.downloadURLs[0]}></Cards>
         )}
       </div>
     )
