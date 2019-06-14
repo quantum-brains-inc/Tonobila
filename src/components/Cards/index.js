@@ -10,9 +10,9 @@ const Cards = (props) =>{
       <Link to={`/show/${props.keys}`}>
           <div className="card-img"><img src={props.thumnail}/><img src={Icon} className='pics-icon'/></div>
               <div className="card-line"></div>
-              <h2 className="card-title">{props.name}</h2>
+              <h2 className="card-title">{props.carName}</h2>
               <div className="card-bottom">
-                  <p className="card-city">{props.city}</p>
+                  <p className="card-city">{props.ville}</p>
                   <p className="card-date">{props.date}</p>
               </div>
         </Link>

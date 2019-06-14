@@ -18,6 +18,7 @@ export default class Master extends Component {
             telephone:'',
             author: '',
             uid: '',
+            ville:'',
             marque: '',
             prix: '',
             modele: '',
@@ -98,7 +99,7 @@ export default class Master extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
         
-        const { title, description, author,telephone, adresse, main, carrosserie, uid, marque, downloadURLs, prix, modele, carburant, annee, couleur_ex, couleur_in, type_cha, kilometrage, num_port, puissance_fiscale } = this.state;
+        const { title, description,ville, author,telephone, adresse, main, carrosserie, uid, marque, downloadURLs, prix, modele, carburant, annee, couleur_ex, couleur_in, type_cha, kilometrage, num_port, puissance_fiscale } = this.state;
 
         if(downloadURLs.length !== 0 && description != ''){
             
@@ -107,6 +108,7 @@ export default class Master extends Component {
                 description,
                 marque,
                 main,
+                ville,
                 downloadURLs,
                 author,
                 telephone,
@@ -138,6 +140,7 @@ export default class Master extends Component {
                     prix: '',
                     modele: '',
                     carburant: '',
+                    ville: '',
                     annee: '',
                     couleur_ex: '',
                     couleur_in: '',
