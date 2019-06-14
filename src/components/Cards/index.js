@@ -4,7 +4,7 @@ import './Cards.css';
 import Icon from '../../images/photo.png'
 import {Link} from 'react-router-dom'
 
-const Cards = (props) =>{
+const Cards = (props) =>{ 
   return (
       <div className="card" >
       <Link to={`/show/${props.keys}`}>

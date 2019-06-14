@@ -65,9 +65,9 @@ class Navbar extends Component{
               </React.Fragment>
                 : <React.Fragment>
                   <li>{user.displayName}</li>
-                  <div class="dropdown">
+                  <div className="dropdown">
                   <li><img className="user_img" src={user.photoURL}></img></li>
-                    <div class="dropdown-content">
+                    <div className="dropdown-content">
                       <li><NavLink to="/profile">Profile</NavLink></li>
                       <li><NavLink to="/setting">Setting</NavLink></li>
                       <li><a onClick={this.logout}>Logout</a></li>
