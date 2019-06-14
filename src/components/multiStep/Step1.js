@@ -3,6 +3,21 @@ import React, { Component } from 'react'
 
 export default class Step1 extends Component {
     state={
+        cities:[
+            "Agadir", "Ain Harrouda", "Al Hoceima", "Azrou", "Aït Melloul",
+            "Ben Guerir", "Beni Ansar", "Beni Mellal", "Benslimane", "Berkane",
+            "Berrechid", "Bouskoura", "Casablanca", "Dar Bouazza", "Dcheira El Jihadia",
+            "Drargua", "El Jadida", "El Kelaa Des Sraghna", "Errachidia", "Essaouira",
+            "Fez", "Fnideq", "Fquih Ben Salah", "Guelmim", "Guercif", "Inezgane",
+            "Kenitra", "Khemisset", "Khenifra", "Khouribga", "Ksar El Kebir", 
+            "Lahraouyine", "Larache", "Lqliaa", "M'diq", "Marrakech", "Martil",
+            "Meknes", "Midelt", "Mohammedia", "Nador", "Ouarzazate", "Ouazzane",
+            "Oued Zem", "Oujda", "Oulad Teima", "Rabat", "Safi", "Sale", "Sefrou",
+            "Settat", "Sidi Bennour", "Sidi Kacem", "Sidi Slimane", "Skhirat",
+            "Souk El Arbaa", "Suq as-Sabt Awlad an-Nama", "Tan-Tan", "Tangier",
+            "Taourirt", "Taroudant", "Taza", "Temara", "Tetouan", "Tifelt",
+            "Tiznit", "Youssoufia"
+        ],
         cars:[
             "abarth","acura","alpha-romeo","aston-martin","audi","bentley"
             ,"bmw","bugatti","cadillac","chevrolet","chrysler","citroen",
@@ -69,26 +84,7 @@ export default class Step1 extends Component {
                         onChange={this.props.handleChange}
                         name="ville">
                         <option value="" >Choisir Une Option...</option>
-                        <option value="Casablanca">Casablanca</option>
-                        <option value="Fès">Fès</option>
-                        <option value="Salé">Salé</option>
-                        <option value="Tanger">Tanger</option>
-                        <option value="Marrakech">Marrakech</option>
-                        <option value="Meknès">Meknès</option>
-                        <option value="Rabat">Rabat</option>
-                        <option value="Oujda">Oujda</option>
-                        <option value="Kénitra">Kénitra</option>
-                        <option value="Agadir">Agadir</option>
-                        <option value="Tétouan">Tétouan</option>
-                        <option value="Témara">Témara</option>
-                        <option value="Safi">Safi</option>
-                        <option value="Mohammédia">Mohammédia</option>
-                        <option value="Khouribga">Khouribga</option>
-                        <option value="El Jadida">El Jadida</option>
-                        <option value="Béni Mellal">Béni Mellal</option>
-                        <option value="Taza">Taza</option>
-                        <option value="Khémisset">Khémisset</option>
-                        <option value="Taourirt">Taourirt</option>
+                        {this.state.cities.map(city => <option key={city} value={city}>{city}</option>)}
                     </select>
                 </div>
                 <div>
