@@ -19,6 +19,8 @@ export default class Master2 extends Component {
             adresse: '',
             telephone: '',
             author: '',
+            ville:'',
+            prix_max:'',
             uid: '',
             marque: '',
             prix: '',
@@ -53,9 +55,11 @@ export default class Master2 extends Component {
                     title: posts.title,
                     description: posts.description,
                     author: posts.author,
+                    ville: posts.ville,
                     carrosserie: posts.carrosserie,
                     adresse: posts.adresse,
                     telephone: posts.telephone,
+                    prix_max: posts.prix_max,
                     marque: posts.marque,
                     prix: posts.prix,
                     modele: posts.modele,
@@ -134,7 +138,7 @@ export default class Master2 extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
 
-        const { title, description, author, telephone, adresse, main, carrosserie, uid, marque, downloadURLs, prix, modele, carburant, annee, couleur_ex, couleur_in, type_cha, kilometrage, num_port, puissance_fiscale } = this.state;
+        const { title, description, author, telephone, adresse,ville,prix_max, main, carrosserie, uid, marque, downloadURLs, prix, modele, carburant, annee, couleur_ex, couleur_in, type_cha, kilometrage, num_port, puissance_fiscale } = this.state;
         const updateRef = firebase.firestore().collection('posts').doc(this.state.key);
         if (downloadURLs.length !== 0 && description != '') {
 
@@ -146,6 +150,8 @@ export default class Master2 extends Component {
                 downloadURLs,
                 author,
                 telephone,
+                prix_max,
+                ville,
                 adresse,
                 carrosserie,
                 puissance_fiscale,
@@ -165,10 +171,12 @@ export default class Master2 extends Component {
                     adresse: '',
                     author: '',
                     main: '',
+                    ville,
                     telephone: '',
                     uid: '',
                     description: '',
                     puissance_fiscale: '',
+                    prix_max:'',
                     marque: '',
                     carrosserie,
                     prix: '',
@@ -250,6 +258,7 @@ export default class Master2 extends Component {
                             ville={this.state.ville}
                             annee={this.state.annee}
                             prix_max={this.state.prix_max}
+                            telephone={this.state.telephone}
                         />
                         <Step2edit
                             currentStep={this.state.currentStep}

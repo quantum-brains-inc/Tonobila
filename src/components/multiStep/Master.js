@@ -44,7 +44,7 @@ export default class Master extends Component {
 
     _next() {
         let currentStep = this.state.currentStep ;
-        const step1Names = ['marque','modele','adresse','telephone','ville','annee','prix_max'];
+        const step1Names = ['marque','modele','adresse','telephone','ville','annee','prix'];
         const step2Names = ['main','carburant','couleur_ex','couleur_in','carrosserie','kilometrage','num_port','puissance_fiscale']
         let namesArray;
         switch(currentStep) {
@@ -214,7 +214,7 @@ export default class Master extends Component {
                         adresse={this.state.adresse}
                         ville={this.state.ville}
                         annee={this.state.annee}
-                        prix_max={this.state.prix_max}
+                        prix_max={this.state.prix}
                     />
                     <Step2
                         currentStep={this.state.currentStep}

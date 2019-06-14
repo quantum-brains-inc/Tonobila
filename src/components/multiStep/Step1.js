@@ -110,12 +110,12 @@ export default class Step1 extends Component {
                     </input>
                 </div>
                 <div>
-                    <label htmlFor="prix_max">Prix*</label>
+                    <label htmlFor="prix">Prix*</label>
                     <input
-                        id="prix_max"
-                        value={this.props.prix_max}
+                        id="prix"
+                        value={this.props.prix}
                         onChange={this.props.handleChange}
-                        name="prix_max"
+                        name="prix"
                         type="number"
                         min="0"
                         >
