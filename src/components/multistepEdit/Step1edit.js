@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class Step1 extends Component {
+export default class Step1edit extends Component {
     state={
         cities:[
             "Agadir", "Ain Harrouda", "Al Hoceima", "Azrou", "Aït Melloul",
@@ -38,17 +38,18 @@ export default class Step1 extends Component {
         .then(()=> this.setState({carsModules}) )  
     }
     render() {
-        if (this.props.currentStep !== 1) { 
+        if (this.props.currentStep !== 1) {
             return null
         }
         return (
             <div>
-                <h3>Détails de Véhicule</h3>
+                 <h3>Détails de Véhicule</h3>
                 <div>
                     <label htmlFor="marque">Marque*</label>
                     <select
                         id="marque"
-                        value={this.props.marque} 
+                        defaultValue={this.props.marque} 
+                        value={this.props.marque}
                         onChange={(e)=>{this.props.handleChange(e);this.optionHandlerChange(e)}} 
                         name="marque">
                         <option value="" >Choisir Une Option...</option>
@@ -59,6 +60,7 @@ export default class Step1 extends Component {
                     <label htmlFor="modele">Modéle*</label>
                     <select
                         id="modele"
+                        defaultValue={this.props.modele}
                         value={this.props.modele}
                         onChange={this.props.handleChange}
                         name="modele">
@@ -70,6 +72,7 @@ export default class Step1 extends Component {
                     <label htmlFor="adresse">Adresse*</label>
                     <input
                         id="adresse"
+                        defaultValue={this.props.adresse}
                         value={this.props.adresse}
                         onChange={this.props.handleChange}
                         name="adresse">
@@ -79,6 +82,7 @@ export default class Step1 extends Component {
                     <label htmlFor="ville">Ville*</label>
                     <select
                         id="ville"
+                        defaultValue={this.props.ville}
                         value={this.props.ville}
                         onChange={this.props.handleChange}
                         name="ville">
@@ -90,6 +94,7 @@ export default class Step1 extends Component {
                     <label htmlFor="annee">Mise en Circulation*</label>
                     <input
                         id="annee"
+                        defaultValue={this.props.annee}
                         value={this.props.annee}
                         onChange={this.props.handleChange}
                         name="annee"
@@ -101,6 +106,7 @@ export default class Step1 extends Component {
                     <label htmlFor="telephone">telephone*</label>
                     <input
                         id="telephone"
+                        defaultValue={this.props.telephone}
                         value={this.props.telephone}
                         onChange={this.props.handleChange}
                         name="telephone"
@@ -113,6 +119,7 @@ export default class Step1 extends Component {
                     <label htmlFor="prix_max">Prix*</label>
                     <input
                         id="prix_max"
+                        defaultValue={this.props.prix_max}
                         value={this.props.prix_max}
                         onChange={this.props.handleChange}
                         name="prix_max"

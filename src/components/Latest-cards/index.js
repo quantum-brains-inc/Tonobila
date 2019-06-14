@@ -38,7 +38,6 @@ export default class LatestCards extends Component {
       this.unsubscribe = this.ref.onSnapshot(this.onCollectionUpdate);
     }
 
-
   render() {
     return (
       <div className="latest-cards-container">

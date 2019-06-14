@@ -6,7 +6,7 @@ import imag3 from '../../images/tesla1.jpg'
 import imag4 from '../../images/tesla2.jpg'
 import Cards from '../Cards'
 import firebase from '../../Firebase'
-
+import {Link} from "react-router-dom";
 
 export default class Show extends Component {
     state = {
@@ -82,6 +82,7 @@ export default class Show extends Component {
             <p>{this.state.post.description}</p>
             <h4>{this.state.author}</h4>
             <button onClick={this.delete.bind(this, this.state.key)}>Delete</button>
+            <Link to={`/edit/${this.state.key}`}>Edit</Link>
           </div>
         </div>
         <div>

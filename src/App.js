@@ -22,6 +22,7 @@ import Setting from './components/Setting'
 import contactUs from './components/contactUs'
 import {auth} from './Firebase'
 import {connect} from 'react-redux'
+import  Master2  from './components/multistepEdit/Master2'
 
 class App extends Component {
 
@@ -46,12 +47,14 @@ class App extends Component {
                         <Route exact path="/setting" component={Setting} />
                         <Route exact path="/error" component={Error}/>
                         <Route exact path="/add" component={AddPost} />
+                        <Route exact path="/edit/:id" component={Master2} />
                         <Route exact path="/show/:id" component={Show} />
                         <Route exact path="/guidachat" component={Guidachat} />
                         <Route exact path="/condition" component={Condition} />
                         <Route exact path="/blog" component={Blog} />
                         <Route exact path="/profile" component={Profile} />
                         <Route exact path="/contact-us" component={contactUs} />
+                        <Route path="*" render={() => <Redirect to="/Error" />} />
                         {this.props.isLoggedIn ?
                         <Redirect to="/" />
                         :
@@ -60,7 +63,7 @@ class App extends Component {
                             <Route exact path="/signin" component={Signin}/>
                         </React.Fragment>
                         }
-                        <Route path="*" render={() => <Redirect to="/Error" />} />
+                    
                     </Switch>
                     <Footer/>
                     <CookieConsent
