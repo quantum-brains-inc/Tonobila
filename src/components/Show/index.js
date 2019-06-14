@@ -63,13 +63,16 @@ export default class Show extends Component {
                 </div>
                 
                 <div>
+                <img src={this.state.image1} onClick={() => ChangeImage(this.state.image1)}/>
+                </div>
+                
+                <div>
                 <img src={this.state.image2} onClick={() => ChangeImage(this.state.image2)}/>
                 </div>
                 
                 <div>
                 <img src={this.state.image3} onClick={() => ChangeImage(this.state.image3)}/>
                 </div>
-                
                 <div>
                 <img src={this.state.image4} onClick={() => ChangeImage(this.state.image4)}/>
                 </div>
