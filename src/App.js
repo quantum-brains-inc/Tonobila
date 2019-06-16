@@ -54,7 +54,6 @@ class App extends Component {
                         <Route exact path="/blog" component={Blog} />
                         <Route exact path="/profile" component={Profile} />
                         <Route exact path="/contact-us" component={contactUs} />
-                        <Route path="*" render={() => <Redirect to="/Error" />} />
                         {this.props.isLoggedIn ?
                         <Redirect to="/" />
                         :
@@ -63,7 +62,7 @@ class App extends Component {
                             <Route exact path="/signin" component={Signin}/>
                         </React.Fragment>
                         }
-                    
+                        <Route path="*" render={() => <Redirect to="/Error" />} />
                     </Switch>
                     <Footer/>
                     <CookieConsent
