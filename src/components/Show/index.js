@@ -1,18 +1,16 @@
 import React, { Component } from 'react'
 import './show.css'
-import imag from '../../images/tesla.jpg'
-import imag2 from '../../images/teslaM.jpg'
-import imag3 from '../../images/tesla1.jpg'
-import imag4 from '../../images/tesla2.jpg'
 import Cards from '../Cards'
 import firebase from '../../Firebase'
 import {Link} from "react-router-dom";
+import { connect } from "react-redux";
 
-export default class Show extends Component {
+class Show extends Component {
     state = {
       imageURL: '',
       post: {},
-      key: ''
+      key: '',
+      uid: ''
     }
   componentDidMount() {
     const ref = firebase.firestore().collection('posts').doc(this.props.match.params.id);
@@ -28,7 +26,8 @@ export default class Show extends Component {
           imageURL: doc.data().downloadURLs[0],
           author: doc.data().author.name,
           key: doc.id,
-          isLoading: false
+          isLoading: false,
+          uid: doc.data().uid.uid
         });
       } else {
         console.log("No such document!");
@@ -44,6 +43,7 @@ export default class Show extends Component {
     });
   }
   render() {
+    var user = firebase.auth().currentUser;
       const ChangeImage = (source) => {
           this.setState({
               imageURL: source,
@@ -79,13 +79,21 @@ export default class Show extends Component {
               </div>
           </div>
           <div className="right">
+            {console.log(user.uid)}
+            {console.log(this.state.uid)}
             <h1>{this.state.post.modele}</h1>
             <h4>{this.state.post.adress}</h4>
             <h4>+212 67353476</h4>
             <p>{this.state.post.description}</p>
             <h4>{this.state.author}</h4>
-            <button onClick={this.delete.bind(this, this.state.key)}>Delete</button>
-            <Link to={`/edit/${this.state.key}`}>Edit</Link>
+            {this.props.isLoggedIn == true && user.uid == this.state.uid ?
+              <React.Fragment>
+                <button onClick={this.delete.bind(this, this.state.key)}>Delete</button>
+                <button><Link to={`/edit/${this.state.key}`}>Edit</Link></button>
+              </React.Fragment>
+            :
+              <p></p>
+            }
           </div>
         </div>
         <div>
@@ -144,3 +152,9 @@ export default class Show extends Component {
     )
   }
 }
+
+const mapStateToProps = state => ({
+  isLoggedIn: state.isLoggedIn
+})
+
+export default connect(mapStateToProps)(Show)
