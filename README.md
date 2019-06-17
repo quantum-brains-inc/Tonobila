@@ -6,12 +6,14 @@ Tonobila is a car listing app
 
 - [ ] Add data to profile user.
 - [ ] Pop up when logout.
+- [ ] Fix Profile logging issues.
 - [x] ~~Setting component.~~
 - [x] ~~Edit componts.~~
 - [ ] Search.
 - [ ] Search advanced.
-- [ ] Profile data.
 - [x] ~~Fix card on front-page.~~
 - [ ] Fix facebook logging.
 - [ ] error Handling.
-- [ ] Conditional redering on edit and delete posts.
+- [ ] pagination.
+- [ ] Confirmation on change data.
+- [x] ~~Conditional redering on edit and delete posts.~~

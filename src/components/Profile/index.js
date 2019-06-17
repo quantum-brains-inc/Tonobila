@@ -21,6 +21,7 @@ class Profile extends Component {
                 </div>
                 <h1 className='profile-user-name'>{user.displayName}</h1>
                 <p className="profile-city">Agadir</p>
+                <p className="profile-city">{user.email}</p>
                 <div className="create-post-btn">
                   <button className="create-post">Create Post</button>
                 </div>
