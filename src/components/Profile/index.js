@@ -4,10 +4,67 @@ import img from '../../images/img.svg'
 import Cards from '../Cards'
 import firebase from '../../Firebase'
 
+
+
 class Profile extends Component {
+
+  constructor(props) {
+      super(props);
+      this.state = {
+        loading: false
+      };
+  }
+
+  componentDidMount(){
+    let user = firebase.auth().currentUser;
+    let user_uid = user.uid
+    let query = firebase.firestore().collection("posts").where('uid.uid', '==', `${user_uid}`)
+    const posts = [];
+    query.get().then((querySnapshot => {
+      querySnapshot.forEach(doc => {
+        const {
+          title,
+          description,
+          author,
+          ville,
+          date,
+          key,
+          marque,
+          modele,
+          downloadURLs
+        } = doc.data();
+        posts.push({
+          key: doc.id,
+          doc,
+          title,
+          marque,
+          modele,
+          description,
+          author,
+          ville,
+          date,
+          downloadURLs
+        });
+      })
+    }));
+    this.setState({
+      posts
+    });
+        setTimeout(() => {
+          this.makeCard()
+        },1000)
+  }
+
+  makeCard() {
+        this.setState({
+          loading: true
+        })
+  }
+
   render() {
     let user = firebase.auth().currentUser;
-    console.log(user)
+    if (!this.state.loading)
+      return null;
     return (
       <div className="App_profile">
           <div className="profile-container">
@@ -36,16 +93,23 @@ class Profile extends Component {
                       <td>10</td>
                     </tr>
                   </table>
-                
                 </div>
               </div>
             </div>
             <div className="right-side">
               <div>
                 <div className="latest-cards-container">
-                  <Cards className="cards-item-1"/>
-                  <Cards className="cards-item-2"/>
-                  <Cards className="cards-item-3"/>
+                {
+                  this.state.posts.map(post =>
+                   <Cards 
+                     className="cards-item-1" 
+                     carName={post.marque+' '+post.modele} 
+                     ville={post.ville}
+                     keys={post.key} 
+                     thumnail={post.downloadURLs[0]}>
+                   </Cards>
+                    )
+                  }
                 </div>
               </div>
             </div>

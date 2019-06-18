@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './add.css';
-import ImportPic from '../ImportPic';
 import firebase from '../../Firebase'
 import { connect } from "react-redux";
 import Master from "../multiStep/Master"

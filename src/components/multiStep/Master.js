@@ -94,6 +94,7 @@ export default class Master extends Component {
             author: { name },
             uid: { uid }
         })
+        this.props.history.push('/');
     }
 
     handleSubmit = (event) => {
