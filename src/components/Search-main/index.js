@@ -79,7 +79,7 @@ export default class SearchMain extends Component {
             <option value="">Choisir une ville</option>
             {this.state.cities.map(city=><option key={city} value={city}>{city}</option>)}
           </select>
-          <select  name="annee" value="" onChange={(e)=>{this.props.handleChange(e)}}>
+          <select  name="annee" onChange={(e)=>{this.props.handleChange(e)}}>
             <option value="">Choisir un annee</option>
             {this.state.years.map(year=> <option key={year} value={year}>{year}</option>)}
           </select>
