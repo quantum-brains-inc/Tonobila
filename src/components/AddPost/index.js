@@ -5,7 +5,7 @@ import firebase from '../../Firebase'
 import { connect } from "react-redux";
 import Master from "../multiStep/Master"
 
-  class AddPost extends Component { 
+class AddPost extends Component { 
           
   render() {
     let user = firebase.auth().currentUser;

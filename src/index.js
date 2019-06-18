@@ -7,7 +7,7 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
 const initialState = {
-    isLoggedIn: false
+    isLoggedIn: false,
 }
 const reducer = (state = initialState, action) => {
 

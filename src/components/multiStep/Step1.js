@@ -28,7 +28,8 @@ export default class Step1 extends Component {
             "porsche","renault","rolls-royce","rover","saab","seat","skoda","smart",
             "ssangyong","subaru","suzuki","tesla","toyota","volkswagen","volvo"
         ],
-        carsModules:[]
+        carsModules:[],
+        years:[]
     }
     optionHandlerChange(e){
         let carsModules = [];
@@ -37,6 +38,18 @@ export default class Step1 extends Component {
         .then(data => carsModules = data.map(car => car))
         .then(()=> this.setState({carsModules}) )  
     }
+    getYears = () =>{
+        let date = new Date()
+        let years = [];
+        let currentYear = date.getFullYear();
+        for(let i = currentYear ; i >= 1900 ; i--){
+          years.push(i);
+        } 
+        this.setState({years})
+      }
+      componentDidMount(){
+          this.getYears();
+      }
     render() {
         if (this.props.currentStep !== 1) { 
             return null
@@ -72,8 +85,7 @@ export default class Step1 extends Component {
                         id="adresse"
                         value={this.props.adresse}
                         onChange={this.props.handleChange}
-                        name="adresse">
-                    </input>
+                        name="adresse"/>
                 </div>
                 <div>
                     <label htmlFor="ville">Ville*</label>
@@ -88,14 +100,10 @@ export default class Step1 extends Component {
                 </div>
                 <div>
                     <label htmlFor="annee">Mise en Circulation*</label>
-                    <input
-                        id="annee"
-                        value={this.props.annee}
-                        onChange={this.props.handleChange}
-                        name="annee"
-                        type="date"
-                        >
-                    </input>
+                    <select id="annee" value={this.props.annee} onChange={this.props.handleChange} name="annee">
+                        <option value="">Choisir une option</option>
+                        {this.state.years.map(year=><option key={year} value={year}>{year}</option>)}
+                    </select>
                 </div>
                 <div>
                     <label htmlFor="telephone">telephone*</label>

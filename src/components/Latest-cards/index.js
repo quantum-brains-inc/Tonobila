@@ -17,22 +17,22 @@ export default class LatestCards extends Component {
       onCollectionUpdate = (querySnapshot) => {
       const posts = [];
       querySnapshot.forEach((doc) => {
-        const { title, description, author, ville, date, key,marque,modele, downloadURLs } = doc.data();
-        posts.push({
-          key: doc.id,
-          doc,
-          title,
-          marque,
-          modele,
-          description,
-          author,
-          ville,
-          date,
-          downloadURLs
-        });
+      const { title, description, author, ville, date, key,marque,modele, downloadURLs } = doc.data();
+      posts.push({
+        key: doc.id,
+        doc,
+        title,
+        marque,
+        modele,
+        description,
+        author,
+        ville,
+        date,
+        downloadURLs
       });
-      this.setState({
-        posts
+    });
+    this.setState({
+      posts
     });
     }
     getTime(arg){
@@ -52,18 +52,23 @@ export default class LatestCards extends Component {
     componentDidMount() {
       this.unsubscribe = this.ref.onSnapshot(this.onCollectionUpdate);
     }
+    searchSubmitData= () => this.setState({posts : this.props.searchData})
   render() {
+    let content = this.state.posts.length > 0 ? 
+    (this.state.posts.map(post => 
+        <Cards 
+        className="cards-item-1" 
+        carName={post.marque+' '+post.modele} 
+        ville={post.ville}  
+        date={this.getTime(post.doc._document.version.timestamp.seconds)} 
+        keys={post.key} 
+        thumnail={post.downloadURLs[0]}></Cards>
+      )
+    ) 
+    : <h3>ماكاينش</h3> 
     return (
       <div className="latest-cards-container">
-        {this.state.posts.map(post => 
-          <Cards 
-          className="cards-item-1" 
-          carName={post.marque+' '+post.modele} 
-          ville={post.ville}  
-          date={this.getTime(post.doc._document.version.timestamp.seconds)} 
-          keys={post.key} 
-          thumnail={post.downloadURLs[0]}></Cards>
-        )}
+        {content}
       </div>
     )
   }
