@@ -9,7 +9,7 @@ Tonobila is a car listing app
 - [ ] Fix Profile logging issues.
 - [x] ~~Setting component.~~
 - [x] ~~Edit componts.~~
-- [ ] Search.
+- [x] ~~Search.~~
 - [ ] Search advanced.
 - [x] ~~Fix card on front-page.~~
 - [ ] Fix facebook logging.
