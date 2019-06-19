@@ -10,12 +10,12 @@ Tonobila is a car listing app
 - [x] ~~Setting component.~~
 - [x] ~~Edit componts.~~
 - [x] ~~Search.~~
-- [ ] Search advanced.
+- [x] ~~Search advanced.~~
 - [x] ~~Fix card on front-page.~~
 - [ ] Fix facebook logging.
 - [ ] error Handling.
 - [ ] pagination.
-- [ ] contact us.
-- [ ] add price to cards and details change makaynch.
+- [x] ~~contact us.~~
+- [x] ~~add price to cards and details change makaynch.~~
 - [ ] Confirmation on change data.
 - [x] ~~Conditional redering on edit and delete posts.~~
