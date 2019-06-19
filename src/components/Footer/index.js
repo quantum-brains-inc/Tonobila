@@ -24,8 +24,8 @@ import {Link} from 'react-router-dom'
                   <ul>
                       <li>Condition d'utilisation</li>
                       <li><Link to="/condition">conditions générales</Link></li>
-                      <li><Link to="/condition">Qui sommes nous</Link></li>
-                      <li><Link to="/about">Blog</Link></li>     
+                      <li><Link to="/about">Qui sommes nous</Link></li>
+                      <li><Link to="/blog">Blog</Link></li>     
                   </ul>
               </li>
               <li>
