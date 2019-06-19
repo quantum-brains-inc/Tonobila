@@ -45,6 +45,21 @@ class Show extends Component {
       console.error("Error removing document: ", error);
     });
   }
+
+  conditional_re() {
+    var user = firebase.auth().currentUser;
+    if(user.uid == this.state.uid) {
+      return null;
+    } else {
+      return (
+        <React.Fragment >
+          <button style={{margin:'20px'}}onClick={this.delete.bind(this, this.state.key)}>Delete</button>
+          <button style={{margin:'20px'}}><Link to={`/edit/${this.state.key}`} style={{color:'white'}}>Edit</Link></button>
+          </React.Fragment>
+      );
+    }
+  }
+
   render() {
     var user = firebase.auth().currentUser;
       const ChangeImage = (source) => {
@@ -82,18 +97,15 @@ class Show extends Component {
               </div>
           </div>
           <div className="right">
-            {console.log(user.uid)}
-            {console.log(this.state.uid)}
             <h1>{this.state.post.modele}</h1>
             <h4>{this.state.post.adress}</h4>
             <h4>+212 67353476</h4>
             <h2>{this.state.prix} DH</h2>
             <p>{this.state.post.description}</p>
             <h4>{this.state.author}</h4>
-            {this.props.isLoggedIn == true && user.uid == this.state.uid ?
-              <React.Fragment >
-                <button style={{margin:'20px'}}onClick={this.delete.bind(this, this.state.key)}>Delete</button>
-                <button style={{margin:'20px'}}><Link to={`/edit/${this.state.key}`} style={{color:'white'}}>Edit</Link></button>
+            {this.props.isLoggedIn == true ?
+              <React.Fragment>
+                {this.conditional_re()}
               </React.Fragment>
             :
               <p></p>

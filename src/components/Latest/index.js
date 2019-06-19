@@ -4,7 +4,6 @@ import LatestCards from '../Latest-cards'
 import SearchMain from '../Search-main';
 import firebase from '../../Firebase'
 
-
 export default class Latest extends Component {
   constructor(props) {
     super(props);
@@ -80,10 +79,10 @@ export default class Latest extends Component {
           handleChange={this.handleChange}
           searchSubmit={this.searchSubmit}
           />
-          <LatestCards 
-          searchData={this.state.searchData}
-          ref="latestCards"
-          />
+            <LatestCards 
+            searchData={this.state.searchData}
+            ref="latestCards"
+            />
         </div>
       </div>
     )
