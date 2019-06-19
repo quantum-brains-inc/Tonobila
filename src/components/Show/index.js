@@ -3,7 +3,9 @@ import './show.css'
 import firebase from '../../Firebase'
 import {Link} from "react-router-dom";
 import { connect } from "react-redux";
-
+import { Whatsapp } from 'react-social-sharing'
+import { Facebook } from 'react-social-sharing'
+import { Mail } from 'react-social-sharing'
 
 class Show extends Component {
     state = {
@@ -48,7 +50,7 @@ class Show extends Component {
 
   conditional_re() {
     var user = firebase.auth().currentUser;
-    if(user.uid == this.state.uid) {
+    if(user.uid !== this.state.uid) {
       return null;
     } else {
       return (
@@ -97,7 +99,7 @@ class Show extends Component {
               </div>
           </div>
           <div className="right">
-            <h1>{this.state.post.modele}</h1>
+            <h1>{this.state.post.marque} {this.state.post.modele}</h1>
             <h4>{this.state.post.adress}</h4>
             <h4>+212 67353476</h4>
             <h2>{this.state.prix} DH</h2>
@@ -113,6 +115,11 @@ class Show extends Component {
           </div>
         </div>
         <div>
+          <div className="social_media_share">
+          <Whatsapp link={`https://tonobila.ml/show/${this.props.match.params.id}`}/>
+          <Facebook link={`https://tonobila.ml/show/${this.props.match.params.id}`} />
+          <Mail solidcircle link={`https://tonobila.ml/show/${this.props.match.params.id}`}/>
+          </div>
           <table>
             <h2>Détails du Véhicule</h2>
             <tr>

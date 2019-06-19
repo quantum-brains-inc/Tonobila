@@ -13,6 +13,8 @@
     "react-router-dom": "^5.0.0",
     "react-router-scroll-top": "^0.1.1",
     "react-scripts": "2.1.5",
+    "react-share": "^3.0.0",
+    "react-social-sharing": "^3.0.1",
     "redux": "^4.0.1"
   },
   "scripts": {

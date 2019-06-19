@@ -3,7 +3,7 @@ import './profile.css';
 import img from '../../images/img.svg'
 import Cards from '../Cards'
 import firebase from '../../Firebase'
-
+import {Link} from "react-router-dom";
 
 
 class Profile extends Component {
@@ -80,7 +80,7 @@ class Profile extends Component {
                 <p className="profile-city">Agadir</p>
                 <p className="profile-city">{user.email}</p>
                 <div className="create-post-btn">
-                  <button className="create-post">Create Post</button>
+                  <button className="create-post"><Link style={{ color:'white'}} to='/add'>Create Post</Link></button>
                 </div>
                 <div className="profile-statistics">
                   <table className='tbl'>
