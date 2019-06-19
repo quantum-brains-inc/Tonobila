@@ -70,7 +70,7 @@ export default class SearchMain extends Component {
             <option value="">Choisir une marque</option>
             {this.state.cars.map(car=><option key={car} value={car}>{car}</option>)}
           </select>
-          <select>
+          <select name="modele" onChange={(e)=>{this.props.handleChange(e)}}>
             <option value="">Choisir un modele</option>
             {this.state.carsModules.map(car=><option value={car} key={car} >{car}</option>)}
           </select>

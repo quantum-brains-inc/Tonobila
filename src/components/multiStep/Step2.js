@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 
 export default class Step2 extends Component {
+    state={
+        couleur:["Argent", "Beige", "Blanc", "Blue", "Blue marine", "Doré", "Gris", "Jaune", "Marron", "Mauve", "Noir", "Orange", "Rose", "Rouge", "Turquoise", "Vert", "Violet"],
+    }
     render() {
 
         if (this.props.currentStep !== 2) {
@@ -42,8 +45,7 @@ export default class Step2 extends Component {
                         onChange={this.props.handleChange}
                         name="couleur_ex">
                         <option value="" >Choisir Une Option...</option>
-                        <option>black</option>
-                        <option>wa zreg</option>
+                        {this.state.couleur.map(color =><option value={color} key={color}>{color}</option>)}
                     </select>
                 </div>
                 <div>
@@ -54,8 +56,7 @@ export default class Step2 extends Component {
                         onChange={this.props.handleChange}
                         name="couleur_in">
                         <option value="" >Choisir Une Option...</option>
-                        <option>red</option>
-                        <option>pink</option>
+                        {this.state.couleur.map(color =><option value={color} key={color}>{color}</option>)}
                     </select>
                 </div>
                 <div>
