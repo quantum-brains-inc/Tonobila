@@ -9,7 +9,7 @@ class contactUs extends Component {
         <div className="contact-us-wrapper">
           <div className="contact-us">
             <form>
-              <h2 className="get-in-touch">Get in touch</h2>
+              <h2 className="get-in-touch">Contactez Nous</h2>
               <input className="contact-name" type='text' placeholder='Full Name' />
               <input className="contact-email" type='email' placeholder='Email' />
               <textarea name="contact" cols="30" rows="7" placeholder='your message'></textarea>

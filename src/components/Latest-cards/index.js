@@ -17,13 +17,14 @@ export default class LatestCards extends Component {
       onCollectionUpdate = (querySnapshot) => {
       const posts = [];
       querySnapshot.forEach((doc) => {
-      const { title, description, author, ville, date, key,marque,modele, downloadURLs } = doc.data();
+      const { title, description, prix, author, ville, date, key , marque,modele, downloadURLs } = doc.data();
       posts.push({
         key: doc.id,
         doc,
         title,
         marque,
         modele,
+        prix,
         description,
         author,
         ville,
@@ -61,11 +62,12 @@ export default class LatestCards extends Component {
         carName={post.marque+' '+post.modele} 
         ville={post.ville}  
         date={this.getTime(post.doc._document.version.timestamp.seconds)} 
-        keys={post.key} 
+        keys={post.key}
+        prix={post.prix} 
         thumnail={post.downloadURLs[0]}></Cards>
       )
     ) 
-    : <h3>ماكاينش</h3> 
+    : <h3> :( Aucun Resultat Pour Cette Recherche</h3> 
     return (
       <div className="latest-cards-container">
         {content}

@@ -15,17 +15,17 @@ import {Link} from 'react-router-dom'
                   <ul>
                       <li>Accueil</li>
                       <li>Annonces</li>
-                      <li><Link to="/guidachat">Guid d'achat</Link></li>
+                      <li><Link to="/guidachat">Guide d'achat</Link></li>
                       <li>Contacter nous</li>
-                      <li><Link to="./blog">Blog</Link></li>
+                      
                   </ul>
               </li>
               <li>
                   <ul>
                       <li>Condition d'utilisation</li>
-                      <li><Link to="./condition">conditions générales</Link></li>
-                      <li>Qui sommes nous</li>
-                      <li>Politique de confidentialité</li>      
+                      <li><Link to="/condition">conditions générales</Link></li>
+                      <li><Link to="/condition">Qui sommes nous</Link></li>
+                      <li><Link to="/about">Blog</Link></li>     
                   </ul>
               </li>
               <li>

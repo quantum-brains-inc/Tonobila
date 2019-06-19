@@ -8,12 +8,12 @@ const Cards = (props) =>{
   return (
       <div className="card" >
       <Link to={`/show/${props.keys}`}>
-        <div className="card-img"><img src={props.thumnail}/><img src={Icon} className='pics-icon'/></div>
+        <div className="card-img"><img src={props.thumnail}/></div>
         <div className="card-line"></div>
         <h2 className="card-title">{props.carName}</h2>
         <div className="card-bottom">
             <p className="card-city">{props.ville}</p>
-            <p className="card-date">{props.date}</p>
+            <p className="card-date">{props.prix} DH</p>
         </div>
         </Link>
       </div>

@@ -1,16 +1,18 @@
 import React, { Component } from 'react'
 import './show.css'
-import Cards from '../Cards'
 import firebase from '../../Firebase'
 import {Link} from "react-router-dom";
 import { connect } from "react-redux";
+
 
 class Show extends Component {
     state = {
       imageURL: '',
       post: {},
       key: '',
-      uid: ''
+      uid: '',
+      prix: '',
+      main: ''
     }
   componentDidMount() {
     const ref = firebase.firestore().collection('posts').doc(this.props.match.params.id);
@@ -27,7 +29,8 @@ class Show extends Component {
           author: doc.data().author.name,
           key: doc.id,
           isLoading: false,
-          uid: doc.data().uid.uid
+          uid: doc.data().uid.uid,
+          prix: doc.data().prix,
         });
       } else {
         console.log("No such document!");
@@ -84,12 +87,13 @@ class Show extends Component {
             <h1>{this.state.post.modele}</h1>
             <h4>{this.state.post.adress}</h4>
             <h4>+212 67353476</h4>
+            <h2>{this.state.prix} DH</h2>
             <p>{this.state.post.description}</p>
             <h4>{this.state.author}</h4>
             {this.props.isLoggedIn == true && user.uid == this.state.uid ?
-              <React.Fragment>
-                <button onClick={this.delete.bind(this, this.state.key)}>Delete</button>
-                <button><Link to={`/edit/${this.state.key}`}>Edit</Link></button>
+              <React.Fragment >
+                <button style={{margin:'20px'}}onClick={this.delete.bind(this, this.state.key)}>Delete</button>
+                <button style={{margin:'20px'}}><Link to={`/edit/${this.state.key}`} style={{color:'white'}}>Edit</Link></button>
               </React.Fragment>
             :
               <p></p>
@@ -106,10 +110,6 @@ class Show extends Component {
             <tr>
               <th>Kilométrage:</th>
               <td>{this.state.post.kilometrage}</td>
-            </tr>
-            <tr>
-              <th>Boite de vitesses:</th>
-              <td>{this.state.post.boite_de_vitesses}</td>
             </tr>
             <tr>
               <th>Carburant</th>
@@ -133,7 +133,7 @@ class Show extends Component {
             </tr>
             <tr>
               <th>Première main</th>
-              <td>{this.state.post.premiere_main}</td>
+              <td>{this.state.post.main}</td>
             </tr>
             <tr>
               <th>Puissance Fiscale</th>
@@ -141,11 +141,8 @@ class Show extends Component {
             </tr>
           </table>
         </div>
-        <div className="show_other_cards">
+        <div className="actuality-container">
           <div>
-            <Cards/>
-            <Cards/>
-            <Cards/>
           </div>
         </div>
       </div>

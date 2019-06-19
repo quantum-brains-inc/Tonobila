@@ -60,8 +60,8 @@ class Navbar extends Component{
             <li><NavLink to="/contact-us" onClick={clickLinksHandler} >Contactez nous</NavLink></li>
               {this.props.isLoggedIn == false ?
             <React.Fragment>
-                <li className='sign-in' id="bebe"><NavLink to="/signin"><button onClick={clickLinksHandler}>Sign In</button></NavLink></li>
-                <li className='sign-up'><NavLink to="/signup"><button onClick={clickLinksHandler} >Sign Up</button></NavLink></li>
+                <li className='sign-in' id="bebe"><NavLink to="/signin"><button onClick={clickLinksHandler}>Connexion</button></NavLink></li>
+                <li className='sign-up'><NavLink to="/signup"><button onClick={clickLinksHandler}>Inscription</button></NavLink></li>
               </React.Fragment>
                 : <React.Fragment>
                   <li>{user.displayName}</li>
@@ -69,8 +69,8 @@ class Navbar extends Component{
                   <li><img className="user_img" src={user.photoURL}></img></li>
                     <div className="dropdown-content">
                       <li><NavLink to="/profile">Profile</NavLink></li>
-                      <li><NavLink to="/setting">Setting</NavLink></li>
-                      <li><a onClick={this.logout}>Logout</a></li>
+                      <li><NavLink to="/setting">Paramètres</NavLink></li>
+                      <li><a onClick={this.logout}>Déconnexion</a></li>
                     </div>
                   </div>
                 </React.Fragment>}

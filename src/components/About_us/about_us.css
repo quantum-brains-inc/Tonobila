@@ -1,0 +1,30 @@
+ .About_us_container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-top: 100px;
+ }
+ .About_us_pictures {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 40px;
+ }
+ .About_us_child img{
+     width: 40%;
+ }
+@media (min-width: 992px) and (max-width: 1199px) {
+    .About_us_container {
+        width: 970px;
+    }
+}
+@media (max-width: 991px) {
+    .About_us_container {
+        width: 750px;
+    }
+}
+@media (max-Width :767px) {
+    .About_us_container {
+        width: auto;
+    }
+}

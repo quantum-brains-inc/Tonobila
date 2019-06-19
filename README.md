@@ -16,5 +16,6 @@ Tonobila is a car listing app
 - [ ] error Handling.
 - [ ] pagination.
 - [ ] contact us.
+- [ ] add price to cards and details change makaynch.
 - [ ] Confirmation on change data.
 - [x] ~~Conditional redering on edit and delete posts.~~
