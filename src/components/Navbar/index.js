@@ -68,7 +68,7 @@ class Navbar extends Component{
                   <div className="dropdown">
                   <li><img className="user_img" src={user.photoURL}></img></li>
                     <div className="dropdown-content">
-                      <li><NavLink to="/profile">Profile</NavLink></li>
+                      <li><NavLink to={`profile/${user.uid}`}>Profile</NavLink></li>
                       <li><NavLink to="/setting">Paramètres</NavLink></li>
                       <li><a onClick={this.logout}>Déconnexion</a></li>
                     </div>

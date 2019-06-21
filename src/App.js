@@ -66,7 +66,7 @@ class App extends Component {
                         <Route exact path="/condition" component={Condition} />
                         <Route exact path="/about" component={About} />
                         <Route exact path="/blog" component={Blog} />
-                        <Route exact path="/profile" component={Profile} />
+                        <Route exact path="/profile/:id" component={Profile} />
                         <Route exact path="/contact-us" component={contactUs} />
                         {this.props.isLoggedIn ?
                         <Redirect to="/" />
