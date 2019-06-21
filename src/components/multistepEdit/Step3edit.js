@@ -6,12 +6,12 @@ export default class Step3edit extends Component {
             return null
         }
         return (
-            <div>
-                <div>
-                    <form>
+            <div className="steps">
+                <div className="addEditDescription">
+                    {/* <form> */}
                         <label htmlFor="description" >Description</label>
                         <textarea onChange={this.props.handleChange} id="description" value={this.props.description} name="description" cols="30" rows="10" defaultValue={this.props.description}></textarea>
-                    </form>
+                    {/* </form> */}
                 </div>
             </div>
         )

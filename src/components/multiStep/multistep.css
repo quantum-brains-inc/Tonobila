@@ -1,0 +1,223 @@
+.addEditPostTitle{
+    text-align: left;
+    color: #000;
+    font-weight: 500;
+    font-size: 28px;
+    margin: 10px 0 ;
+    width: 240px;
+    /* font-family:  Roboto !important; */
+}
+.addEditPostContainer{
+    width:1000px;
+    margin:0 auto;
+}
+.addEditPostForm{
+    background:#fff;
+    padding: 20px 80px 10px;
+}
+.steps_progress{
+    display: flex;
+    align-items: center;
+}
+.steps_progress>div{
+    display: flex;
+    justify-content: space-around;
+    width: calc( 100% - 400px);
+    font-size: 14px;
+}
+.steps_progress>div>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #DDDDDD;
+    color: #fff;
+    border-radius: 50px;
+    width:25px;
+    height:25px;
+    position: relative;
+}
+.steps_progress>div>div:before{
+    content: '';
+    position: absolute;
+    width: 185px;
+    z-index: -15;
+    height: 2px;
+    left: 20px;
+    background: #DDDDDD;
+}
+.steps_progress>div>div:nth-child(3):before{
+    width: 0px;
+}
+.steps_progress>div>div:nth-child(1){
+   background: #ffae00;
+}
+.steps_progress2>div>div:nth-child(2){
+    background: #ffae00;
+ }
+.steps_progress2>div>div:nth-child(1):before{
+    background: #ffae00;
+}
+.steps_progress3>div>div:nth-child(3){
+    background: #ffae00;
+ }
+.steps_progress3>div>div:nth-child(2):before{
+    background: #ffae00;
+}
+
+.steps{
+    display: flex;
+    justify-content: space-between
+}
+.steps>div>div{
+    display: flex;
+    flex-direction: column;
+}
+.steps>div>div select{
+    height:40px;
+    width:350px;
+    background: #FAF9F6;
+    border: none;
+    font-weight:200; 
+    color:#808080;
+    font-size: 14px;
+    padding-left: 15px;
+    background-image: url('../../images/selectArrow.png');
+    background-repeat: no-repeat;
+    background-position-x: 320px;
+    background-position-y: 10px; 
+    outline-color: #ffae00
+}
+.steps>div>div label{
+    margin: 50px 0 10px;
+    font-weight: bold;
+    color: #000;
+    font-size: 15px
+}
+.steps>div>div input{
+    height: 40px;
+    border:none;
+    padding: 0 0 0 10px;
+    background: #FAF9F6;
+    color:#808080;
+    font-weight: 200;
+    font-size: 14px;
+    outline-color: #ffae00
+}
+.steps h4{
+    margin: 50px 0 10px;
+    font-weight: bold;
+    color: #000;
+    font-size: 15px
+}
+.prevNextBtnsContainer{
+    display:flex;
+    width:100%;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.prevNextBtnsContainer p{
+    padding:0;margin:0;
+    color: #ff5e5e
+}
+.prevNextBtnsContainer button {
+    width: 110px;
+    padding: 12px
+}
+.prevNextBtnsContainer button.prevBtn {
+    border: 1px solid #ffae00;
+    background: #fff;
+    color: #ffae00;
+    box-shadow: none;
+    margin-right: 20px
+}
+.radioContaienr{
+    display:flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 50px
+}
+.radioContaienr input[type='radio']{
+    display:none
+}
+.radioContaienr input[type='radio']:checked + label:before{
+    background:#ffae00;
+}
+.radioContaienr label{
+    margin:0 !important;
+    position: relative;
+    font-weight: 200 !important;
+}
+.radioContaienr label:before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    background: #DDDDDD;
+    right: 70px;
+    top: 2px;
+    border: 1px solid #DDDDDD;
+}
+.radiosInputs{
+    display:flex;
+    margin: 12px
+}
+.steps textarea{
+    resize: none;
+    width:350px;
+    height:180px;
+    border:none;
+    background:#FAF9F6;
+    outline-color:#ffae00;
+    padding:5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%
+    
+}
+.steps .addEditDescription{
+    display:flex;
+    flex-direction: column;
+    margin: 0 auto
+}
+.steps .addEditDescription label{
+    margin: 80px 0 10px;
+    font-weight: bold;
+    color: #000;
+    font-size: 15px;
+}
+.uploadImagesArea{
+    width: 360px;
+    height: 158px;
+    margin: 20px auto
+}
+.uploadImagesArea input{
+    position: relative;
+    padding: 30px 0;
+    height: 30px;
+    outline: none;
+    width:360px;
+    font-family: 'Roboto', sans-serif;
+    font-size:100%;
+}
+.uploadImagesArea input::-webkit-file-upload-button{
+    visibility: hidden;
+}
+.uploadImagesArea input::before{
+    content:'Upload IMG';
+    position:absolute;
+    right:257px;
+    top: 25px;
+    background: #ffae00;
+    background-image: url('../../images/uploadimageicon.png');
+    background-repeat:  no-repeat;
+    background-size: 15px 15px;
+    background-position: 10px 8px; 
+    padding: 10px 10px 10px 30px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 30px;
+    font-family: 'Roboto', sans-serif;
+    /* font-size:100%; */
+}

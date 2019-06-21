@@ -10,9 +10,6 @@ class AddPost extends Component {
     let user = firebase.auth().currentUser;
     return (
       <div className='add-post'>
-        <div>
-          <h1>Ajouter Une Annonce</h1>
-        </div>
         <Master/>
       </div>
     )
