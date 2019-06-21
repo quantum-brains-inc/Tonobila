@@ -4,6 +4,7 @@ import Step2 from './Step2'
 import Step3 from './Step3'
 import firebase from '../../Firebase'
 import FileUploader from "react-firebase-file-uploader";
+import './multistep.css'
 
 export default class Master extends Component {
     constructor(props) {
@@ -80,7 +81,7 @@ export default class Master extends Component {
         })
     }
     handleChange(event) {
-        const { name, value } = event.target
+        const { name, value } = event.target;
         this.setState({
             [name]: value
         })
@@ -182,12 +183,7 @@ export default class Master extends Component {
     get previousButton() {
         let currentStep = this.state.currentStep;
         if (currentStep !== 1) {
-            return (
-                <button
-                    type="button" onClick={this._prev}>
-                    Previous
-      </button>
-            )
+            return <button type="button" className="prevBtn" onClick={this._prev}>Previous</button>
         }
         return null;
     }
@@ -204,10 +200,27 @@ export default class Master extends Component {
         return null;
     }
     render() {
+        let progressstepClasses = ['steps_progress'];
+        if(this.state.currentStep === 2){
+            progressstepClasses = ['steps_progress','steps_progress2'];
+        }
+        if(this.state.currentStep === 3){
+            progressstepClasses = ['steps_progress','steps_progress2','steps_progress3'];
+        }
         return (
             <React.Fragment>
-                {/* <p>Step {this.state.currentStep}</p> */}
-                <form onSubmit={this.handleSubmit}>
+            <div className="addEditPostContainer"> 
+                <div className={progressstepClasses.join(' ')}>
+                    <h1 className="addEditPostTitle">Ajouter un post</h1>
+                    <div>
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                    </div>
+                </div>
+                
+                <form className="addEditPostForm" onSubmit={this.handleSubmit}>
+                    
                     <Step1
                         currentStep={this.state.currentStep}
                         handleChange={this.handleChange}
@@ -235,34 +248,38 @@ export default class Master extends Component {
                         handleChange={this.handleChange}
                         description={this.state.description}
                     />
-                    <p>{this.state.errorText}</p>
-                    {this.previousButton}
-                    {this.nextButton}
-                    {this.state.currentStep == 3 ?
-                    <div>
-                        <button type="submit" onClick={this.metaData}>Post</button>
+                     {this.state.currentStep == 3 ?
+                    <div className="uploadImagesArea">
+                        <form>
+                            <FileUploader
+                                accept="image/*"
+                                name="image"
+                                randomizeFilename
+                                storageRef={firebase.storage().ref("images")}
+                                onUploadStart={this.handleUploadStart}
+                                onUploadError={this.handleUploadError}
+                                onUploadSuccess={this.handleUploadSuccess}
+                                onProgress={this.handleProgress}
+                                multiple
+                            />
+                        </form>
                             {this.state.isUploading && <p>Progress: {this.state.progress}</p>}
                             {this.state.avatarURL && <img src={this.state.avatarURL} />}
-                            <form>
-                                <FileUploader
-                                    accept="image/*"
-                                    name="image"
-                                    randomizeFilename
-                                    storageRef={firebase.storage().ref("images")}
-                                    onUploadStart={this.handleUploadStart}
-                                    onUploadError={this.handleUploadError}
-                                    onUploadSuccess={this.handleUploadSuccess}
-                                    onProgress={this.handleProgress}
-                                    multiple
-                                />
-                            </form>
-                            <div>{this.state.downloadURLs.map((downloadURL, i) => {
-                                return <img style={{width:'100px'}} key={i} src={downloadURL} />;
-                            })}</div>
-                    </div>:
-                        <p></p>
+                            <div className="uploadedimages">{this.state.downloadURLs.map((downloadURL, i) =><img style={{width:'80px',marginRight:'5px'}} key={i} src={downloadURL} />)}</div>
+                    </div>
+                    : null
                         }
+                    <div className="prevNextBtnsContainer">
+                        <p>{this.state.errorText}</p>
+                        <div>
+                            {this.previousButton}
+                            {this.nextButton}
+                            {this.state.currentStep == 3 ? <button type="submit" onClick={this.metaData}>Post</button> : null}
+                        </div>
+                        
+                    </div>
                 </form>
+            </div>
             </React.Fragment>
         )
     }

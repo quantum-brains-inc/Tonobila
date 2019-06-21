@@ -55,80 +55,84 @@ export default class Step1 extends Component {
             return null
         }
         return (
-            <div>
-                <h3>Détails de Véhicule</h3>
+            <div className="steps">
                 <div>
-                    <label htmlFor="marque">Marque*</label>
-                    <select
-                        id="marque"
-                        value={this.props.marque} 
-                        onChange={(e)=>{this.props.handleChange(e);this.optionHandlerChange(e)}} 
-                        name="marque">
-                        <option value="" >Choisir Une Option...</option>
-                        {this.state.cars.map(car=> <option key={car} value={car}>{ car }</option>)}
-                    </select>
-                </div>
-                <div>   
-                    <label htmlFor="modele">Modéle*</label>
-                    <select
-                        id="modele"
-                        value={this.props.modele}
-                        onChange={this.props.handleChange}
-                        name="modele">
-                        <option value="" >Choisir Une Option...</option>
-                        {this.state.carsModules.map(module => <option key={module} value={module}>{module}</option> )}
-                    </select>
-                </div>
-                <div>
-                    <label htmlFor="adresse">Adresse*</label>
-                    <input
-                        id="adresse"
-                        value={this.props.adresse}
-                        onChange={this.props.handleChange}
-                        name="adresse"/>
-                </div>
-                <div>
-                    <label htmlFor="ville">Ville*</label>
-                    <select
-                        id="ville"
-                        value={this.props.ville}
-                        onChange={this.props.handleChange}
-                        name="ville">
-                        <option value="" >Choisir Une Option...</option>
-                        {this.state.cities.map(city => <option key={city} value={city}>{city}</option>)}
-                    </select>
-                </div>
-                <div>
-                    <label htmlFor="annee">Mise en Circulation*</label>
-                    <select id="annee" value={this.props.annee} onChange={this.props.handleChange} name="annee">
-                        <option value="">Choisir une option</option>
-                        {this.state.years.map(year=><option key={year} value={year}>{year}</option>)}
-                    </select>
+                    <div>
+                        <label htmlFor="marque">Marque</label>
+                        <select
+                            id="marque"
+                            value={this.props.marque} 
+                            onChange={(e)=>{this.props.handleChange(e);this.optionHandlerChange(e)}} 
+                            name="marque">
+                            <option value="" >Choisir Une Option...</option>
+                            {this.state.cars.map(car=> <option key={car} value={car}>{ car }</option>)}
+                        </select>
+                    </div>
+                    <div>   
+                        <label htmlFor="modele">Modéle</label>
+                        <select
+                            id="modele"
+                            value={this.props.modele}
+                            onChange={this.props.handleChange}
+                            name="modele">
+                            <option value="" >Choisir Une Option...</option>
+                            {this.state.carsModules.map(module => <option key={module} value={module}>{module}</option> )}
+                        </select>
+                    </div>
+                    <div>
+                        <label htmlFor="adresse">Adresse</label>
+                        <input
+                            id="adresse"
+                            value={this.props.adresse}
+                            onChange={this.props.handleChange}
+                            name="adresse"/>
+                    </div>
+                    <div>
+                        <label htmlFor="ville">Ville</label>
+                        <select
+                            id="ville"
+                            value={this.props.ville}
+                            onChange={this.props.handleChange}
+                            name="ville">
+                            <option value="" >Choisir Une Option...</option>
+                            {this.state.cities.map(city => <option key={city} value={city}>{city}</option>)}
+                        </select>
+                    </div>
                 </div>
                 <div>
-                    <label htmlFor="telephone">telephone*</label>
-                    <input
-                        id="telephone"
-                        value={this.props.telephone}
-                        onChange={this.props.handleChange}
-                        name="telephone"
-                        type="tel"
-                        min="0"
-                        >
-                    </input>
+                    <div>
+                        <label htmlFor="annee">Mise en Circulation</label>
+                        <select id="annee" value={this.props.annee} onChange={this.props.handleChange} name="annee">
+                            <option value="">Choisir une option</option>
+                            {this.state.years.map(year=><option key={year} value={year}>{year}</option>)}
+                        </select>
+                    </div>
+                    <div>
+                        <label htmlFor="telephone">telephone</label>
+                        <input
+                            id="telephone"
+                            value={this.props.telephone}
+                            onChange={this.props.handleChange}
+                            name="telephone"
+                            type="tel"
+                            min="0"
+                            >
+                        </input>
+                    </div>
+                    <div>
+                        <label htmlFor="prix">Prix</label>
+                        <input
+                            id="prix"
+                            value={this.props.prix}
+                            onChange={this.props.handleChange}
+                            name="prix"
+                            type="number"
+                            min="0"
+                            >
+                        </input>
+                    </div>
                 </div>
-                <div>
-                    <label htmlFor="prix">Prix*</label>
-                    <input
-                        id="prix"
-                        value={this.props.prix}
-                        onChange={this.props.handleChange}
-                        name="prix"
-                        type="number"
-                        min="0"
-                        >
-                    </input>
-                </div>
+                
             </div>
         )
     }
