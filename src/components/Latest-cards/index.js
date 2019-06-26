@@ -7,7 +7,7 @@ export default class LatestCards extends Component {
 
     constructor(props) {
       super(props);
-      this.ref = firebase.firestore().collection('posts').limit(6);
+      this.ref = firebase.firestore().collection('posts');
       this.unsubscribe = null;
       this.state = {
         posts: []
