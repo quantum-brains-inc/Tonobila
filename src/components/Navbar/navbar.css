@@ -1,8 +1,9 @@
 nav{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 80px;
     max-width: 1170px;
-    padding: 8px 0;
     margin: 0 auto;
 }
 nav .menu ul li{
@@ -133,10 +134,11 @@ nav a {
         fill:transparent
     }
     nav{
+        align-items: start;
         width: auto;  
         overflow: hidden;
         transition:0.3s;
-        padding:10px 20px;
+        padding: 10px 20px;
     }
     nav .menu ul{
         display:flex;
