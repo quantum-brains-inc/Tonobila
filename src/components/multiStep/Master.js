@@ -183,7 +183,7 @@ export default class Master extends Component {
     get previousButton() {
         let currentStep = this.state.currentStep;
         if (currentStep !== 1) {
-            return <button type="button" className="prevBtn" onClick={this._prev}>Previous</button>
+            return <button type="button" className="prevBtn" onClick={this._prev}>Précédent</button>
         }
         return null;
     }
@@ -193,7 +193,7 @@ export default class Master extends Component {
             return (
                 <button
                     type="button" onClick={this._next}>
-                    Next
+                    Suivant
       </button>
             )
         }

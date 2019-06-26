@@ -67,7 +67,7 @@ export default class LatestCards extends Component {
         thumnail={post.downloadURLs[0]}></Cards>
       )
     ) 
-    : <h3> :( Aucun Resultat Pour Cette Recherche</h3> 
+    : <h3 className="error-search"> Aucun Resultat Pour Cette Recherche</h3> 
     return (
       <div className="latest-cards-container">
         {content}
