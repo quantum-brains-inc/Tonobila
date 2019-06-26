@@ -1,7 +1,17 @@
 .latest-cards-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap:30px
+    grid-gap:30px;
+    align-content: center
+
+
+
+
+}
+
+.error-search{
+    font-size:14px;
+    grid-column: 2;
 
 }
 @media  (max-width: 1199px) { 

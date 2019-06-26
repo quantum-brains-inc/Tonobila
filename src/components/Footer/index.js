@@ -40,7 +40,7 @@ import {Link} from 'react-router-dom'
 
       </div>
       <div className='footer-social'>
-          <p>Follow us on social media</p>
+          <p>Suivez nous sur les réseaux sociaux</p>
           <a href="#"><i className="fab fa-instagram" /></a>
           <a href="#"><i className="fab fa-facebook" /></a>
           <a href="#"><i className="fab fa-twitter" /></a>
