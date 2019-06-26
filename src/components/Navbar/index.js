@@ -5,6 +5,7 @@ import { NavLink, Link, withRouter} from "react-router-dom";
 import { connect } from "react-redux";
 import firebase, { auth } from '../../Firebase'
 
+
 class Navbar extends Component{
   state={
     burgclicked:false
@@ -51,7 +52,7 @@ class Navbar extends Component{
     return(
     <div className='Navbar'>
       <nav className={navClasses}>
-        <div className="logo-cont"><Link to='/'><img src={logo} className="logo"alt="Logo"/></Link></div>
+        <div className="logo-cont"><Link to='/'><img src={logo} className="logo" alt="Logo"/></Link></div>
         <div className="menu">
           <ul>
             <li><NavLink to="/" onClick={clickLinksHandler} >Accueil</NavLink></li>
