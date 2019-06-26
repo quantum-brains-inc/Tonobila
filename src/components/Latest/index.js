@@ -72,7 +72,7 @@ export default class Latest extends Component {
     return (
       <div className="Latest">
         <div className="latest-wrapper">
-          <h1>Voitures plus récentes</h1>
+          <h1>Annonces les plus récentes</h1>
         </div>
         <div className="latest-content-wrapper">
           <SearchMain
