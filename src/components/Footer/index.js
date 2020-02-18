@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom'
   return (
     <div className='footer'>
       <div className='footer-copyright'>
-          <h3>Tonobila.ma<br/><span>&copy; 2019</span> </h3>
+          <h3>Tonobila.ma<br/><span>&copy; 2020</span> </h3>
       </div>
       <div className='footer-menu'>
           <ul>
